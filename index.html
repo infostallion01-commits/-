@@ -14,9 +14,9 @@
 <body class="bg-gray-100 text-gray-900">
 
     <!-- Top Bar -->
-    <div class="bg-red-800 text-white text-xs py-1 px-4 flex justify-between items-center font-semibold">
+    <div class="bg-red-800 text-white text-xs py-1.5 px-4 flex justify-between items-center font-semibold">
         <span>📍 नई दिल्ली | निष्पक्ष, निर्भीक, पारदर्शी</span>
-        <span id="date-display"></span>
+        <span>15 अक्टूबर 2026</span>
     </div>
 
     <!-- Header & Branding -->
@@ -25,78 +25,124 @@
         <p class="text-gray-700 text-sm md:text-base font-semibold mt-1">चौथा स्तंभ, जन-जन के संग</p>
     </header>
 
-    <!-- Breaking News Ticker -->
-    <div class="bg-zinc-900 text-white flex items-center px-4 py-2 text-sm overflow-hidden">
-        <span class="bg-red-600 text-white text-xs uppercase px-2 py-1 rounded font-bold mr-3 shrink-0">विशेष आगाज़</span>
-        <marquee behavior="scroll" direction="left" class="font-medium text-gray-200">
-            15 अक्टूबर जयंती विशेष: डॉ. एपीजे अब्दुल कलाम के सपनों और सत्यनिष्ठा के संकल्प के साथ 'प्रतिप्रश्न भारत' का शंखनाद • सुप्रीम कोर्ट में केंद्र व पुलिस का माफीनामा • दिल्ली-एनसीआर में सांसों पर संकट • त्योहारी महंगाई की मार • सत्ता किसी की भी हो, सवाल जनता का होगा
-        </marquee>
-    </div>
-
-    <!-- Navigation Bar (ई-अखबार PDF बटन सहित) -->
+    <!-- Navigation Bar with PDF Download Button -->
     <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex items-center justify-between overflow-x-auto text-sm font-bold text-gray-700 py-3 px-4 space-x-6 whitespace-nowrap">
-            <div class="flex items-center space-x-6">
-                <a href="index.html" class="text-red-700 border-b-2 border-red-700 pb-1">मुख्य पृष्ठ</a>
-                <a href="#sc-apology" class="hover:text-red-700">संवैधानिक जवाबदेही</a>
-                <a href="#pollution-report" class="hover:text-red-700">पर्यावरण & स्वास्थ्य</a>
-                <a href="#inflation-report" class="hover:text-red-700">अर्थव्यवस्था</a>
-                <a href="#meerut-case" class="hover:text-red-700">ज़मीनी पड़ताल</a>
-                <a href="#khel" class="hover:text-red-700">खेल विमर्श</a>
-                <a href="about.html" class="hover:text-red-700">संपादकीय एवं लीगल</a>
-            </div>
-            <!-- Newspaper PDF Link Button -->
-            <div>
-                <a href="epaper.html" class="bg-red-700 text-white px-3 py-1.5 rounded-md hover:bg-red-800 text-xs font-bold shadow-sm inline-flex items-center gap-1">
-                    📰 दैनिक ई-अखबार (PDF)
-                </a>
-            </div>
+        <div class="max-w-4xl mx-auto flex items-center justify-between py-2.5 px-4">
+            <span class="text-xs font-bold text-gray-600 uppercase">मुख्य समाचार पोर्टल</span>
+            <a href="epaper.html" class="bg-red-700 text-white px-3.5 py-1.5 rounded hover:bg-red-800 text-xs font-bold shadow flex items-center gap-1.5">
+                📰 दैनिक ई-अखबार (PDF)
+            </a>
         </div>
     </nav>
 
-    <!-- Main Content Area -->
-    <main class="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 mt-2">
-        
-        <!-- Left/Center Main Column (All Stories in Order) -->
-        <div class="md:col-span-2 space-y-8">
-            
-            <!-- 1. मुख्य लीड स्टोरी (कलाम साहब वाली लॉन्च पोस्ट शीर्ष पर यथावत) -->
-            <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                
-                <!-- Main Visual (Kalam Sahab Image) -->
-                <div class="relative bg-zinc-900">
-                    <img src="file_000000007fd0820ea1d00770fa136db5%20(1).png" alt="Dr. APJ Abdul Kalam" class="w-full h-72 md:h-96 object-cover object-top">
-                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                        <span class="bg-red-700 text-white text-xs px-2 py-1 rounded font-bold uppercase">15 अक्टूबर जयंती विशेष</span>
-                        <p class="text-xs text-gray-300 mt-1 italic">"सपने वो नहीं जो हम सोते हुए देखते हैं, सपने वो हैं जो हमें सोने नहीं देते।" — डॉ. एपीजे अब्दुल कलाम</p>
-                    </div>
+    <!-- Main Content Stream (All 6 News Stories in Clear Sequence) -->
+    <main class="max-w-4xl mx-auto p-4 space-y-6">
+
+        <!-- 1. कलाम साहब आलेख (Lead Story) -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-4">
+            <div class="flex items-center justify-between">
+                <span class="bg-red-800 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">15 अक्टूबर जयंती विशेष / मुख्य लीड</span>
+                <span class="text-xs text-gray-500 font-semibold">नई दिल्ली</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold leading-snug text-gray-900 serif-hindi">
+                कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद
+            </h2>
+            <div class="text-xs text-gray-600 border-b pb-2">
+                ✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक)
+            </div>
+
+            <!-- 3 Visual Images -->
+            <div class="grid grid-cols-3 gap-2 my-2 bg-gray-50 p-2 border rounded">
+                <div class="text-center">
+                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_000000007fd0820ea1d00770fa136db5%20(1).png" class="h-28 w-full object-cover object-top border rounded">
+                    <p class="text-[10px] font-bold mt-1">डॉ. एपीजे अब्दुल कलाम</p>
                 </div>
+                <div class="text-center">
+                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/1792078500488%20(1).png" class="h-28 w-full object-cover object-top border rounded">
+                    <p class="text-[10px] font-bold mt-1">लक्ष्मी नारायण वशिष्ठ</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_00000000f13c81f48f3bbf6654539d69.png" class="h-28 w-full object-contain bg-white border rounded p-1">
+                    <p class="text-[10px] font-bold mt-1">CVC सत्यनिष्ठा प्रमाणपत्र</p>
+                </div>
+            </div>
 
-                <div class="p-6 md:p-8 space-y-5">
-                    <!-- Headline -->
-                    <h2 class="text-2xl md:text-4xl font-extrabold leading-tight text-gray-900 serif-hindi">
-                        कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद
-                    </h2>
+            <div class="text-sm text-gray-800 leading-relaxed space-y-3 pt-1">
+                <p>15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना, नैतिक शुचिता और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। डॉ. कलाम का दृढ़ विश्वास था कि एक सशक्त, विकसित और आत्मनिर्भर राष्ट्र का निर्माण केवल गगनचुंबी इमारतों या कागज़ी घोषणाओं से नहीं, बल्कि सत्यनिष्ठा, स्वतंत्र सोच और अंतिम पंक्ति में खड़े युवा के आत्मसम्मान से होता है।</p>
+                <p>आज जब मुख्यधारा की पत्रकारिता पर सहमति और अनुनय का दबाव स्पष्ट दिखाई देता है, ऐसे ऐतिहासिक अवसर पर <strong>'प्रतिप्रश्न भारत'</strong> का जन्म किसी कॉरपोरेट अथवा राजनीतिक दल के समर्थन के लिए नहीं, बल्कि लोकतंत्र के चौथे स्तंभ की बुनियादी मर्यादाओं को पुनर्स्थापित करने के लिए हुआ है।</p>
+            </div>
+        </article>
 
-                    <!-- Subheadline -->
-                    <p class="text-red-800 font-bold text-base md:text-lg border-l-4 border-red-700 pl-3 leading-snug">
-                        चौथा स्तंभ केवल सत्ता का दर्पण नहीं, बल्कि जनता की ढाल है—पारदर्शिता, निर्भीकता और संवैधानिक जवाबदेही के संकल्प के साथ एक नए युग की शुरुआत।
-                    </p>
+        <!-- 2. सुप्रीम कोर्ट माफीनामा -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-3">
+            <span class="bg-red-800 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">संवैधानिक जवाबदेही</span>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-950 serif-hindi leading-snug">
+                सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस का बिना शर्त माफीनामा: शांतिपूर्ण विरोध पर पाबंदियों पर अदालत सख्त; वैश्विक मंचों पर भी साख पर सवाल
+            </h3>
+            <div class="text-xs text-gray-600 border-b pb-2">✍️ रिपोर्ट: विशेष विधिक डेस्क | प्रतिप्रश्न भारत</div>
+            <p class="text-sm text-gray-800 leading-relaxed">
+                राजधानी में नागरिकों के लोकतांत्रिक और शांतिपूर्ण विरोध प्रदर्शनों को रोकने के नाम पर मेट्रो स्टेशनों को बंद करने, इंटरनेट सेवाओं पर मनमानी रोक लगाने और धारा 144 के अंधाधुंध इस्तेमाल पर देश की सर्वोच्च अदालत में सरकार को भारी असहजता का सामना करना पड़ा है। सुप्रीम कोर्ट की कड़ी आपत्ति के बाद केंद्रीय गृह सचिव और दिल्ली पुलिस आयुक्त को अदालत के समक्ष बिना शर्त माफी (Unconditional Apology) का औपचारिक हलफनामा प्रस्तुत करना पड़ा। शीर्ष अदालत ने रेखांकित किया कि कानून-व्यवस्था के नाम पर नागरिकों के मौलिक अधिकारों (अनुच्छेद 19 व 21) का दमन नहीं किया जा सकता।
+            </p>
+        </article>
 
-                    <!-- Byline -->
-                    <div class="py-3 px-4 bg-gray-50 rounded-md border text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2">
-                        <div class="flex items-center space-x-2">
-                            <span>✍️ <strong>लेखक:</strong> <span class="text-gray-900 font-bold">लक्ष्मी नारायण वशिष्ठ</span> (मुख्य संपादक एवं संस्थापक)</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span>📅 15 अक्टूबर</span>
-                            <span>•</span>
-                            <span>📍 नई दिल्ली</span>
-                        </div>
-                    </div>
+        <!-- 3. तनुजा जोशी - प्रदूषण रिपोर्ट -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-3">
+            <span class="bg-amber-700 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">पर्यावरण & जन-स्वास्थ्य</span>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-950 serif-hindi leading-snug">
+                अक्टूबर की शुरुआत के साथ ही दिल्ली-एनसीआर की हवा में घुला 'धीमा ज़हर': ग्रैप के कागज़ी फरमानों और ज़मीनी अमल के बीच पिसती आम जनता
+            </h3>
+            <div class="text-xs text-gray-700 font-bold border-b pb-2">
+                ✍️ <strong>तनुजा जोशी</strong> (वरिष्ठ संवाददाता) | प्रतिप्रश्न भारत
+            </div>
+            <p class="text-sm text-gray-800 leading-relaxed">
+                हर साल की तरह इस बार भी अक्टूबर का दूसरा पखवाड़ा शुरू होते ही देश की राजधानी और समूचे एनसीआर की आबोहवा में ज़हरीला धुंधलका छाने लगा है। कई इलाकों में वायु गुणवत्ता सूचकांक (AQI) 300 के पार दर्ज हो रहा है। अस्पतालों में सांस और एलर्जी के मरीजों की संख्या 25% तक बढ़ गई है। करोड़ों रुपये के ग्रीन सेस फंड मौजूद होने के बावजूद स्मॉग टावर और एंटी-स्मॉग गन केवल फोटो-ऑप साबित हो रहे हैं।
+            </p>
+        </article>
 
-                    <!-- Article Body -->
-                    <div class="text-gray-800 text-base leading-relaxed space-y-4 pt-2">
-                        <p>
-                            <strong>नई दिल्ली:</strong> 15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना, नैतिक शुचिता और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। डॉ. कलाम का दृढ़ विश्वास था कि एक सशक्त, विकसित और आत्मनिर्भर राष्ट्र का निर्माण केवल गगन
-                            
+        <!-- 4. तनुजा जोशी - महंगाई रिपोर्ट -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-3">
+            <span class="bg-red-700 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">अर्थव्यवस्था & थाली की पड़ताल</span>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-950 serif-hindi leading-snug">
+                त्योहारों की चमक पर महंगाई का ग्रहण: दाल, खाद्य तेल और हरी सब्जियों के दाम आसमान पर; बफर स्टॉक के दावे विफल
+            </h3>
+            <div class="text-xs text-gray-700 font-bold border-b pb-2">
+                ✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत
+            </div>
+            <p class="text-sm text-gray-800 leading-relaxed">
+                दशहरा और दिवाली से पहले खुदरा बाजारों में महंगाई ने आम परिवारों का बजट बिगाड़ दिया है। खाद्य तेलों पर आयात शुल्क में बदलाव के बाद सरसों तेल 20 से 30 रुपये प्रति लीटर तक महंगा हुआ है। प्याज और टमाटर के खुदरा भाव 50 से 70 रुपये प्रति किलो पर टिके हैं। थोक और खुदरा भाव के अंतर से बिचौलिए मुनाफा कमा रहे हैं, जबकि किसान और उपभोक्ता दोनों बेहाल हैं।
+            </p>
+        </article>
+
+        <!-- 5. मेरठ हत्याकांड पड़ताल -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-3">
+            <span class="bg-zinc-800 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">क्राइम इन्वेस्टिगेशन</span>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-950 serif-hindi leading-snug">
+                मेरठ का 'नीला ड्रम' हत्याकांड: सीमेंट, नमक और साजिश की परतों में छिपा अपराध; फॉरेंसिक साक्ष्यों से खुली गुत्थी
+            </h3>
+            <div class="text-xs text-gray-600 border-b pb-2">✍️ विशेष अपराध ब्यूरो | मेरठ ग्राउंड रिपोर्ट</div>
+            <p class="text-sm text-gray-800 leading-relaxed">
+                पश्चिमी उत्तर प्रदेश के मेरठ में एक किराए के मकान में नीले रंग के प्लास्टिक ड्रम के भीतर शव को नमक, चूना और सीमेंट की मोटी परत डालकर हमेशा के लिए दफन करने की रोंगटे खड़े कर देने वाली साजिश का पर्दाफाश हुआ है। फॉरेंसिक टीम (FSL) और सर्विलांस के सहारे पुलिस ने हत्यारों को पकड़ा। यह मामला घनी बस्तियों में बिना पुलिस सत्यापन किराएदार रखने की प्रशासनिक लापरवाही को भी उजागर करता है।
+            </p>
+        </article>
+
+        <!-- 6. खेल विमर्श & संपादक विशेष -->
+        <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-5 md:p-6 space-y-4">
+            <span class="bg-red-800 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase">खेल विमर्श / तीखे सवाल</span>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-950 serif-hindi leading-snug">
+                हैदराबाद में घरेलू मैदान पर लुटाए 247 रन: शाई होप का शतक, लचर गेंदबाजी और मुख्य कोच गौतम गंभीर की रणनीति पर तीखे सवाल
+            </h3>
+            <div class="text-xs text-gray-600 border-b pb-2">✍️ विशेष खेल डेस्क | हैदराबाद ग्राउंड रिपोर्ट</div>
+
+            <div class="grid grid-cols-3 gap-2 bg-red-50 p-3 border border-red-200 text-xs text-gray-900 rounded font-semibold">
+                <div>वेस्टइंडीज: 247/3 (20 ov)<br><span class="text-red-700">शाई होप: 102 (50)</span></div>
+                <div>भारत: 223/10 (19.3 ov)<br><span class="text-red-700">संजू: 56, तिलक: 43</span></div>
+                <div>फ्लॉप शो:<br><span class="text-gray-600">मयंक 0/52, अर्शदीप 1/52</span></div>
+            </div>
+
+            <p class="text-sm text-gray-800 leading-relaxed">
+                हैदराबाद में चौथे टी20 में भारत को वेस्टइंडीज के हाथों 24 रनों से हार झेलनी पड़ी। संजू सैमसन (56) और तिलक वर्मा (43) के आक्रामक प्रयासों के बावजूद पूरी टीम 223 पर सिमट गई। जसप्रीत बुमराह की गैरमौजूदगी में बैकअप गेंदबाजों का कोई स्पष्ट रोडमैप न होना और लगातार हो रहे प्रयोग टीम संतुलन को बिगाड़ रहे हैं।
+            </p>
+
+            <!-- संपादक विशेष टिप्पणी -->
+            <div class="bg-amber-50 border-l-4
+                
