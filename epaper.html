@@ -1,61 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1000, initial-scale=0.35, user-scalable=yes">
-    <title>प्रतिप्रश्न भारत | दैनिक ई-अखबार</title>
+    <title>प्रतिप्रश्न भारत | दैनिक ई-अखबार (4 पृष्ठ)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @page {
-            size: A4 portrait;
-            margin: 0mm;
-        }
-        * {
-            box-sizing: border-box;
-        }
         body { 
             font-family: 'Mukta', sans-serif; 
-            background-color: #1f2937; 
+            background-color: #374151; 
             color: #111827;
             margin: 0;
             padding: 20px 0;
         }
         .serif-hindi { font-family: 'Tiro Devanagari Hindi', serif; }
         
-        /* A4 Portrait Strict Dimensions (210mm x 297mm) */
+        /* A4 Page Framework without cut-off */
         .page-sheet {
             width: 210mm;
-            height: 297mm;
-            max-height: 297mm;
-            padding: 10mm 12mm 8mm 12mm;
-            margin: 15px auto;
+            min-height: 297mm;
+            padding: 12mm 14mm 10mm 14mm;
+            margin: 20px auto;
             background: #ffffff;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            overflow: hidden;
-            page-break-after: always;
-            page-break-inside: avoid;
         }
 
         .border-col {
             border-right: 1px solid #9ca3af;
-            padding-right: 10px;
-            margin-right: 10px;
+            padding-right: 12px;
+            margin-right: 12px;
         }
 
         @media print {
             body { background: transparent; padding: 0; }
             .no-print { display: none !important; }
             .page-sheet {
-                width: 210mm !important;
-                height: 297mm !important;
-                max-height: 297mm !important;
+                width: 100% !important;
+                min-height: 100vh !important;
                 margin: 0 !important;
-                padding: 10mm 12mm 8mm 12mm !important;
+                padding: 12mm 14mm !important;
                 box-shadow: none !important;
                 page-break-after: always !important;
                 page-break-inside: avoid !important;
@@ -65,223 +53,233 @@
 </head>
 <body>
 
-    <!-- Download Bar -->
+    <!-- Sticky PDF Action Bar -->
     <div class="no-print sticky top-0 z-50 bg-neutral-900 text-white py-2 px-6 shadow-2xl border-b-2 border-red-700 flex justify-between items-center max-w-[210mm] mx-auto rounded-b">
         <div class="flex items-center space-x-2">
             <span class="bg-red-700 text-white text-[11px] font-bold px-2 py-0.5 rounded">दैनिक ई-पेपर</span>
-            <span class="text-xs font-semibold">प्रतिप्रश्न भारत • शुद्ध A4 पोर्ट्रेट (सटीक 4 पृष्ठ)</span>
+            <span class="text-xs font-semibold">प्रतिप्रश्न भारत • प्रथम स्थापना अंक (सभी 4 पृष्ठ लाइव)</span>
         </div>
         <button onclick="window.print()" class="bg-red-700 hover:bg-red-800 text-white font-extrabold px-4 py-1.5 rounded text-xs shadow flex items-center gap-1.5 transition">
             📥 PDF डाउनलोड / प्रिंट करें
         </button>
     </div>
 
-    <!-- ================= PAGE 1 ================= -->
+    <!-- =========================================================
+         PAGE 1: मुख्य पृष्ठ (कलाम साहब जयंती एवं स्थापना आलेख)
+         ========================================================= -->
     <div class="page-sheet">
-        <div class="flex-1 flex flex-col justify-between">
-            <div>
-                <!-- Top Header Bar -->
-                <div class="flex justify-between items-center text-[9px] font-bold tracking-widest text-gray-600 border-b pb-0.5 uppercase">
-                    <span>राष्ट्रीय दैनिक संस्करण • नई दिल्ली</span>
-                    <span>सत्यनिष्ठा • पारदर्शिता • निर्भीकता</span>
-                    <span>प्रथम वर्ष • अंक 01</span>
+        <div>
+            <div class="flex justify-between items-center text-[9px] font-bold tracking-widest text-gray-600 border-b pb-0.5 uppercase">
+                <span>राष्ट्रीय दैनिक संस्करण • नई दिल्ली</span>
+                <span>सत्यनिष्ठा • पारदर्शिता • निर्भीकता</span>
+                <span>प्रथम वर्ष • अंक 01</span>
+            </div>
+
+            <!-- Masthead -->
+            <header class="text-center py-1.5 border-b-2 border-black">
+                <div class="grid grid-cols-4 items-center">
+                    <div class="text-left text-[9px] text-gray-700 leading-tight">
+                        <strong>मुख्य संपादक एवं संस्थापक</strong><br>
+                        लक्ष्मी नारायण वशिष्ठ<br>
+                        <span class="text-red-700 font-bold">स्थापना अंक</span>
+                    </div>
+                    <div class="col-span-2 text-center">
+                        <h1 class="text-4xl font-black text-red-900 serif-hindi tracking-tight">प्रतिप्रश्न भारत</h1>
+                        <p class="text-[10px] font-black tracking-widest text-gray-900 uppercase">चौथा स्तंभ, जन-जन के संग</p>
+                    </div>
+                    <div class="text-right text-[9px] text-gray-700 leading-tight">
+                        <strong>शिकायत निवारण अधिकारी</strong><br>
+                        विकास शर्मा<br>
+                        <span>निःशुल्क डिजिटल प्रति</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-[9px] font-bold border-t border-b border-black py-0.5 px-2 mt-1 bg-gray-50">
+                    <span>वर्ष: 01 | अंक: 01</span>
+                    <span>नई दिल्ली, गुरुवार, 15 अक्टूबर 2026</span>
+                    <span>कुल पृष्ठ: 04 | मूल्य: जन-सरोकार</span>
+                </div>
+            </header>
+
+            <!-- Page 1 Content -->
+            <section class="mt-2.5">
+                <div class="border-b border-red-700 pb-1 mb-1.5">
+                    <span class="bg-red-900 text-white text-[9px] font-black px-1.5 py-0.2 uppercase tracking-wide">स्थापना विशेषांक / मुख्य लीड</span>
+                    <h2 class="text-xl font-black text-gray-950 serif-hindi leading-snug mt-0.5">
+                        कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद
+                    </h2>
+                    <p class="text-[11px] font-bold text-red-900 leading-tight mt-0.5">
+                        चौथा स्तंभ केवल सत्ता का दर्पण नहीं, बल्कि जनता की ढाल है—पारदर्शिता और संवैधानिक जवाबदेही के संकल्प के साथ एक नए युग की शुरुआत।
+                    </p>
+                    <div class="text-[9px] text-gray-600 mt-1 flex justify-between border-t pt-0.5">
+                        <span>✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक)</span>
+                        <span>📍 नई दिल्ली ब्यूरो</span>
+                    </div>
                 </div>
 
-                <!-- Masthead -->
-                <header class="text-center py-1 border-b-2 border-black">
-                    <div class="grid grid-cols-4 items-center">
-                        <div class="text-left text-[9px] text-gray-700 leading-tight">
-                            <strong>मुख्य संपादक एवं संस्थापक</strong><br>
-                            लक्ष्मी नारायण वशिष्ठ<br>
-                            <span class="text-red-700 font-bold">स्थापना अंक</span>
-                        </div>
-                        <div class="col-span-2 text-center">
-                            <h1 class="text-4xl font-black text-red-900 serif-hindi tracking-tight">प्रतिप्रश्न भारत</h1>
-                            <p class="text-[10px] font-black tracking-widest text-gray-900 uppercase">चौथा स्तंभ, जन-जन के संग</p>
-                        </div>
-                        <div class="text-right text-[9px] text-gray-700 leading-tight">
-                            <strong>शिकायत निवारण अधिकारी</strong><br>
-                            विकास शर्मा<br>
-                            <span>निःशुल्क डिजिटल प्रति</span>
-                        </div>
+                <!-- 3 Visual Blocks Row -->
+                <div class="grid grid-cols-3 gap-2 my-2 p-1.5 bg-neutral-50 border rounded">
+                    <div class="text-center">
+                        <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_000000007fd0820ea1d00770fa136db5%20(1).png" alt="डॉ. कलाम" class="h-32 w-full object-cover object-top border rounded-sm">
+                        <p class="text-[8.5px] font-bold text-gray-800 mt-0.5">डॉ. एपीजे अब्दुल कलाम</p>
                     </div>
-                    <div class="flex justify-between items-center text-[9px] font-bold border-t border-b border-black py-0.5 px-2 mt-1 bg-gray-50">
-                        <span>वर्ष: 01 | अंक: 01</span>
-                        <span>नई दिल्ली, गुरुवार, 15 अक्टूबर 2026</span>
-                        <span>कुल पृष्ठ: 04 | मूल्य: जन-सरोकार</span>
+                    <div class="text-center">
+                        <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/1792078500488%20(1).png" alt="लक्ष्मी नारायण वशिष्ठ" class="h-32 w-full object-cover object-top border rounded-sm">
+                        <p class="text-[8.5px] font-bold text-gray-800 mt-0.5">लक्ष्मी नारायण वशिष्ठ (मुख्य संपादक)</p>
                     </div>
-                </header>
+                    <div class="text-center">
+                        <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_00000000f13c81f48f3bbf6654539d69.png" alt="CVC प्रतिज्ञा" class="h-32 w-full object-contain bg-white border rounded-sm p-0.5">
+                        <p class="text-[8.5px] font-bold text-green-800 mt-0.5">CVC सत्यनिष्ठा प्रमाणपत्र</p>
+                    </div>
+                </div>
 
-                <!-- Page 1 Lead -->
-                <section class="mt-2">
-                    <div class="border-b border-red-700 pb-1 mb-1">
-                        <span class="bg-red-900 text-white text-[9px] font-black px-1.5 py-0.2 uppercase tracking-wide">स्थापना विशेषांक / मुख्य लीड</span>
-                        <h2 class="text-xl font-black text-gray-950 serif-hindi leading-snug mt-0.5">
-                            कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद
-                        </h2>
-                        <p class="text-[11px] font-bold text-red-900 leading-tight mt-0.5">
-                            चौथा स्तंभ केवल सत्ता का दर्पण नहीं, बल्कि जनता की ढाल है—पारदर्शिता और संवैधानिक जवाबदेही के संकल्प के साथ एक नए युग की शुरुआत।
-                        </p>
-                        <div class="text-[9px] text-gray-600 mt-1 flex justify-between border-t pt-0.5">
-                            <span>✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक)</span>
-                            <span>📍 नई दिल्ली ब्यूरो</span>
-                        </div>
+                <!-- 3 Columns News Flow -->
+                <div class="grid grid-cols-3 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-2">
+                    <div class="border-col">
+                        <p><strong>नई दिल्ली:</strong> 15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना, नैतिक शुचिता और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। डॉ. कलाम का दृढ़ विश्वास था कि एक सशक्त और विकसित राष्ट्र का निर्माण केवल गगनचुंबी इमारतों से नहीं, बल्कि अंतिम पंक्ति में खड़े युवा के आत्मसम्मान और सत्यनिष्ठा से होता है।</p>
+                        <p class="mt-2">आज जब मुख्यधारा की पत्रकारिता पर सहमति और अनुनय का दबाव स्पष्ट दिखाई देता है, ऐसे ऐतिहासिक अवसर पर 'प्रतिप्रश्न भारत' का जन्म किसी कॉरपोरेट अथवा राजनीतिक दल के समर्थन के लिए नहीं, बल्कि लोकतंत्र के चौथे स्तंभ की मर्यादाओं को पुनर्स्थापित करने के लिए हुआ है।</p>
                     </div>
-
-                    <!-- 3 Visual Blocks Row -->
-                    <div class="grid grid-cols-3 gap-2 my-2 p-1.5 bg-neutral-50 border rounded">
-                        <div class="text-center">
-                            <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_000000007fd0820ea1d00770fa136db5%20(1).png" alt="डॉ. कलाम" class="h-36 w-full object-cover object-top border rounded-sm">
-                            <p class="text-[8.5px] font-bold text-gray-800 mt-0.5">डॉ. एपीजे अब्दुल कलाम</p>
-                        </div>
-                        <div class="text-center">
-                            <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/1792078500488%20(1).png" alt="लक्ष्मी नारायण वशिष्ठ" class="h-36 w-full object-cover object-top border rounded-sm">
-                            <p class="text-[8.5px] font-bold text-gray-800 mt-0.5">लक्ष्मी नारायण वशिष्ठ (संपादक)</p>
-                        </div>
-                        <div class="text-center">
-                            <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_00000000f13c81f48f3bbf6654539d69.png" alt="CVC प्रतिज्ञा" class="h-36 w-full object-contain bg-white border rounded-sm p-0.5">
-                            <p class="text-[8.5px] font-bold text-green-800 mt-0.5">CVC सत्यनिष्ठा प्रमाणपत्र</p>
-                        </div>
+                    <div class="border-col">
+                        <p><strong>सत्यनिष्ठा का सार्वजनिक संकल्प:</strong> मुख्य संपादक लक्ष्मी नारायण वशिष्ठ द्वारा केंद्रीय सतर्कता आयोग (CVC) के समक्ष ली गई सत्यनिष्ठा प्रतिज्ञा ही इस मंच का नैतिक संविधान है। न किसी प्रलोभन के आगे झुकना, न दबाव में कलम को मोड़ना और भ्रष्टाचार के विरुद्ध जन-आवाज़ बनना हमारा प्राथमिक दायित्व है।</p>
+                        <p class="mt-2">लोकतंत्र में मीडिया का असली दायित्व जनहित के प्रतिपक्ष के रूप में कार्य करना है। यदि नीतियाँ जनहित के विरुद्ध जाएँ, यदि युवाओं का भविष्य कागज़ी वादों में उलझे, तो वहाँ प्रतिप्रश्न उठाना पत्रकारिता का विधिक व नैतिक दायित्व बन जाता है।</p>
                     </div>
-
-                    <!-- 3 Columns (Text Expanded to Fill Height) -->
-                    <div class="grid grid-cols-3 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-2">
-                        <div class="border-col">
-                            <p><strong>नई दिल्ली:</strong> 15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना, नैतिक शुचिता और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। डॉ. कलाम का दृढ़ विश्वास था कि एक सशक्त, विकसित और आत्मनिर्भर राष्ट्र का निर्माण केवल गगनचुंबी इमारतों या कागज़ी घोषणाओं से नहीं, बल्कि सत्यनिष्ठा, स्वतंत्र सोच और अंतिम पंक्ति में खड़े युवा के आत्मसम्मान से होता है।</p>
-                            <p class="mt-2">आज जब मुख्यधारा की पत्रकारिता पर सहमति और अनुनय का दबाव स्पष्ट दिखाई देता है, ऐसे ऐतिहासिक अवसर पर <strong>'प्रतिप्रश्न भारत'</strong> का जन्म किसी कॉरपोरेट अथवा राजनीतिक दल के समर्थन के लिए नहीं, बल्कि लोकतंत्र के चौथे स्तंभ की बुनियादी मर्यादाओं को पुनर्स्थापित करने के लिए हुआ है।</p>
-                        </div>
-                        <div class="border-col">
-                            <p><strong>सत्यनिष्ठा का सार्वजनिक संकल्प:</strong> मुख्य संपादक लक्ष्मी नारायण वशिष्ठ द्वारा केंद्रीय सतर्कता आयोग (CVC) के समक्ष ली गई सत्यनिष्ठा प्रतिज्ञा ही इस मंच का नैतिक संविधान है। न किसी प्रलोभन के आगे झुकना, न दबाव में कलम को मोड़ना और जीवन के हर क्षेत्र में ईमानदारी का पालन करना हमारा संकल्प है।</p>
-                            <p class="mt-2">लोकतंत्र में मीडिया का असली दायित्व जनहित के प्रतिपक्ष के रूप में कार्य करना है। यदि नीतियाँ जनहित के विरुद्ध जाएँ, यदि युवाओं का भविष्य कागज़ी वादों में उलझे, तो वहाँ प्रतिप्रश्न उठाना पत्रकारिता का विधिक व नैतिक दायित्व बन जाता है। हमारा संकल्प संविधान की कसौटी पर हर नीति की ज़मीनी पड़ताल करना है।</p>
-                        </div>
-                        <div>
-                            <p><strong>कलाम का विज़न:</strong> कलाम साहब ने सिखाया था कि सच्चा देशभक्त वह है जो अपने देश की कमियों पर पर्दा डालने के बजाय उन्हें सुधारने के लिए कड़वे सच का सामना करे। 'प्रतिप्रश्न भारत' उसी वैज्ञानिक चेतना और निर्भीकता को अपनी लेखनी बनाएगा।</p>
-                            <p class="mt-2">यह मंच ग्रामीण-शहरी समानता, युवाओं के रोजगार और तार्किक चिंतन को समर्पित रहेगा। यह मंच जनता का है, जनता के अधिकारों का है। सत्ता किसी की भी हो, सवाल जनता का होगा।</p>
-                            <div class="bg-red-50 p-2 border-l-2 border-red-700 mt-2 text-[9.5px]">
-                                <strong>संपादकीय ध्येय:</strong> स्वतंत्र स्वर, निष्पक्ष विश्लेषण और संवैधानिक शुचिता के प्रति अटूट प्रतिबद्धता।
-                            </div>
-                        </div>
+                    <div>
+                        <p><strong>कलाम का विज़न:</strong> कलाम साहब ने सिखाया था कि सच्चा देशभक्त वह है जो अपने देश की कमियों पर पर्दा डालने के बजाय उन्हें सुधारने के लिए कड़वे सच का सामना करे। 'प्रतिप्रश्न भारत' उसी वैज्ञानिक चेतना और निर्भीकता को अपनी लेखनी बनाएगा।</p>
+                        <p class="mt-2 font-semibold">यह मंच ग्रामीण-शहरी समानता, रोजगार और युवा चेतना को प्राथमिकता देगा। सत्ता किसी की भी हो, सवाल जनता का होगा।</p>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
 
-        <footer class="border-t border-black pt-1 text-[8.5px] text-gray-600 flex justify-between items-center">
+        <footer class="border-t border-black pt-1 text-[8.5px] text-gray-600 flex justify-between items-center mt-4">
             <span>प्रतिप्रश्न भारत (डिजिटल ई-पेपर संस्करण)</span>
             <span>अंक 01 • नई दिल्ली</span>
             <span class="font-bold text-gray-900">पृष्ठ 1 / 4</span>
         </footer>
     </div>
 
-    <!-- ================= PAGE 2 ================= -->
+    <!-- =========================================================
+         PAGE 2: सत्ता, नीति एवं विधिक विमर्श (सुप्रीम कोर्ट माफीनामा)
+         ========================================================= -->
     <div class="page-sheet">
-        <div class="flex-1 flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center border-b border-black pb-0.5 mb-2 text-[9px] font-bold text-gray-800 uppercase">
-                    <span>प्रतिप्रश्न भारत • राष्ट्रीय & संवैधानिक विमर्श</span>
-                    <span>गुरुवार, 15 अक्टूबर 2026</span>
-                    <span class="text-red-800">पृष्ठ 2</span>
+        <div>
+            <div class="flex justify-between items-center border-b border-black pb-0.5 mb-2.5 text-[9px] font-bold text-gray-800 uppercase">
+                <span>प्रतिप्रश्न भारत • राष्ट्रीय & संवैधानिक विमर्श</span>
+                <span>गुरुवार, 15 अक्टूबर 2026</span>
+                <span class="text-red-800">पृष्ठ 2</span>
+            </div>
+
+            <!-- News: SC Apology -->
+            <article class="border-b border-gray-300 pb-3">
+                <span class="bg-red-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">संवैधानिक जवाबदेही / लीड रिपोर्ट</span>
+                <h3 class="text-xl font-black text-gray-950 serif-hindi leading-snug mt-1">
+                    सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस का बिना शर्त माफीनामा: शांतिपूर्ण विरोध पर पाबंदियों पर अदालत सख्त; वैश्विक मंचों पर भी साख पर सवाल
+                </h3>
+                <div class="text-[9px] text-gray-600 my-1 font-semibold flex justify-between border-b pb-0.5">
+                    <span>✍️ रिपोर्ट: विशेष विधिक डेस्क | प्रतिप्रश्न भारत</span>
+                    <span>न्यायिक पड़ताल</span>
                 </div>
 
-                <!-- News: SC Apology -->
-                <article class="border-b border-gray-300 pb-3">
-                    <span class="bg-red-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">संवैधानिक जवाबदेही / लीड रिपोर्ट</span>
-                    <h3 class="text-xl font-black text-gray-950 serif-hindi leading-snug mt-1">
-                        सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस का बिना शर्त माफीनामा: शांतिपूर्ण विरोध पर पाबंदियों पर अदालत सख्त; वैश्विक मंचों पर भी साख पर सवाल
-                    </h3>
-                    <div class="text-[9px] text-gray-600 my-1 font-semibold flex justify-between border-b pb-0.5">
-                        <span>✍️ रिपोर्ट: विशेष विधिक डेस्क | प्रतिप्रश्न भारत</span>
-                        <span>न्यायिक पड़ताल</span>
+                <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-2.5 gap-4">
+                    <div class="border-col">
+                        <p><strong>नई दिल्ली:</strong> राजधानी में नागरिकों के लोकतांत्रिक और शांतिपूर्ण विरोध प्रदर्शनों को रोकने के नाम पर मेट्रो स्टेशनों को बंद करने, इंटरनेट सेवाओं पर मनमानी रोक लगाने और धारा 144 के अंधाधुंध इस्तेमाल पर देश की सर्वोच्च अदालत में सरकार को भारी असहजता का सामना करना पड़ा है।</p>
+                        <p class="mt-2">सुप्रीम कोर्ट की कड़ी आपत्ति के बाद केंद्रीय गृह सचिव और दिल्ली पुलिस आयुक्त को अदालत के समक्ष बिना शर्त माफी (Unconditional Apology) का औपचारिक हलफनामा प्रस्तुत करना पड़ा है। शीर्ष अदालत ने रेखांकित किया कि सामान्य कानून-व्यवस्था के नाम पर नागरिकों के मौलिक अधिकारों (अनुच्छेद 19 व 21) और आवागमन की स्वतंत्रता का दमन नहीं किया जा सकता। विरोध दर्ज कराना लोकतंत्र की जीवंतता है, कोई सुरक्षा संकट नहीं।</p>
                     </div>
+                    <div>
+                        <p><strong>वैश्विक स्तर पर किरकिरी:</strong> अंतरराष्ट्रीय इंटरनेट ट्रैकर संस्थाओं और संयुक्त राष्ट्र (UN) से जुड़े मानवाधिकार निगरानी समूहों ने बार-बार होने वाले संचार शटडाउन पर चिंता जताई है। दुनिया के सबसे बड़े लोकतंत्र की राजधानी में असहमति दबाने के ऐसे प्रशासनिक तौर-तरीकों से भारत की वैश्विक साख प्रभावित हो रही है।</p>
+                        <p class="mt-2">यह माफीनामा केवल एक कानूनी प्रक्रिया नहीं, बल्कि इस बात का आईना है कि शासन-प्रशासन नागरिकों के संवैधानिक अधिकारों को अपनी सुविधा के अनुसार निलंबित नहीं कर सकता। 'प्रतिप्रश्न भारत' सवाल उठाता है कि क्या व्यवस्था बिना अदालती चाबुक के अपनी जवाबदेही कभी नहीं समझेगी?</p>
+                    </div>
+                </div>
+            </article>
 
-                    <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-2 gap-4">
-                        <div class="border-col">
-                            <p><strong>नई दिल्ली:</strong> राजधानी में नागरिकों के लोकतांत्रिक और शांतिपूर्ण विरोध प्रदर्शनों को रोकने के नाम पर मेट्रो स्टेशनों को बंद करने, इंटरनेट सेवाओं पर मनमानी रोक लगाने और धारा 144 के अंधाधुंध इस्तेमाल पर देश की सर्वोच्च अदालत में सरकार को भारी असहजता का सामना करना पड़ा है।</p>
-                            <p class="mt-2">सुप्रीम कोर्ट की कड़ी आपत्ति के बाद केंद्रीय गृह सचिव और दिल्ली पुलिस आयुक्त को अदालत के समक्ष बिना शर्त माफी (Unconditional Apology) का औपचारिक हलफनामा प्रस्तुत करना पड़ा है। शीर्ष अदालत ने रेखांकित किया कि सामान्य कानून-व्यवस्था के नाम पर नागरिकों के मौलिक अधिकारों (अनुच्छेद 19 व 21) और आवागमन की स्वतंत्रता का दमन नहीं किया जा सकता। विरोध दर्ज कराना लोकतंत्र की जीवंतता है, कोई सुरक्षा संकट नहीं।</p>
-                        </div>
-                        <div>
-                            <p><strong>वैश्विक स्तर पर किरकिरी:</strong> अंतरराष्ट्रीय इंटरनेट ट्रैकर संस्थाओं और संयुक्त राष्ट्र (UN) से जुड़े मानवाधिकार निगरानी समूहों ने बार-बार होने वाले संचार शटडाउन पर चिंता जताई है। दुनिया के सबसे बड़े लोकतंत्र की राजधानी में असहमति दबाने के ऐसे प्रशासनिक तौर-तरीकों से भारत की वैश्विक साख प्रभावित हो रही है।</p>
-                            <p class="mt-2">यह माफीनामा केवल एक कानूनी प्रक्रिया नहीं, बल्कि इस बात का आईना है कि शासन-प्रशासन नागरिकों के संवैधानिक अधिकारों को अपनी सुविधा के अनुसार निलंबित नहीं कर सकता। 'प्रतिप्रश्न भारत' सवाल उठाता है कि क्या व्यवस्था बिना अदालती चाबुक के अपनी जवाबदेही कभी नहीं समझेगी?</p>
-                        </div>
-                    </div>
-                </article>
+            <!-- Editorial Section -->
+            <section class="mt-4 bg-neutral-50 p-4 border border-neutral-300 rounded">
+                <div class="border-b border-red-800 pb-1 mb-2 flex justify-between items-center">
+                    <span class="text-red-900 font-black text-xs uppercase serif-hindi">संपादकीय दृष्टि एवं घोषणापत्र</span>
+                    <span class="text-[9px] text-gray-500 font-bold">आचार संहिता 2026</span>
+                </div>
+                <h4 class="text-base font-black text-gray-900 serif-hindi">"सत्ता किसी की भी हो, सवाल जनता का होगा"</h4>
+                <p class="text-[10.5px] text-gray-700 leading-relaxed mt-1.5 text-justify">
+                    लोकतंत्र में विपक्ष केवल संसद के भीतर बैठने वाली सीटों का नाम नहीं है; लोकतंत्र का असली और सबसे सजग प्रतिपक्ष उसका स्वतंत्र मीडिया होता है। यदि नीतियाँ जनहित के विरुद्ध जाएँ, यदि युवाओं का भविष्य कागज़ी वादों में उलझे, और यदि व्यवस्था जवाबदेही से कतराए—तो वहाँ प्रतिप्रश्न उठाना पत्रकारिता का विधिक व नैतिक दायित्व बन जाता है। हमारा संकल्प किसी विचारधारा का अंध-समर्थन या अंध-विरोध करना नहीं, बल्कि संविधान की कसौटी पर हर नीति की ज़मीनी पड़ताल करना है।
+                </p>
 
-                <!-- Editorial Section (Full Height Balanced) -->
-                <section class="mt-3 bg-neutral-50 p-4 border border-neutral-300 rounded">
-                    <div class="border-b border-red-800 pb-1 mb-2 flex justify-between items-center">
-                        <span class="text-red-900 font-black text-xs uppercase serif-hindi">संपादकीय दृष्टि एवं घोषणापत्र</span>
-                        <span class="text-[9px] text-gray-500 font-bold">आचार संहिता 2026</span>
+                <div class="grid grid-cols-2 gap-4 mt-3 pt-2.5 border-t text-[9.5px] text-gray-800 bg-white p-2 border">
+                    <div>
+                        <strong>संपादकीय नेतृत्व:</strong><br>
+                        लक्ष्मी नारायण वशिष्ठ (मुख्य संपादक एवं संस्थापक)<br>
+                        तनुजा जोशी (वरिष्ठ संवाददाता एवं आर्थिक-पर्यावरण ब्यूरो)
                     </div>
-                    <h4 class="text-base font-black text-gray-900 serif-hindi">"सत्ता किसी की भी हो, सवाल जनता का होगा"</h4>
-                    <p class="text-[10.5px] text-gray-700 leading-relaxed mt-2 text-justify">
-                        लोकतंत्र में विपक्ष केवल संसद के भीतर बैठने वाली सीटों का नाम नहीं है; लोकतंत्र का असली और सबसे सजग प्रतिपक्ष उसका स्वतंत्र मीडिया होता है। यदि नीतियाँ जनहित के विरुद्ध जाएँ, यदि युवाओं का भविष्य कागज़ी वादों में उलझे, और यदि व्यवस्था जवाबदेही से कतराए—तो वहाँ प्रतिप्रश्न उठाना पत्रकारिता का विधिक व नैतिक दायित्व बन जाता है। हमारा संकल्प किसी विचारधारा का अंध-समर्थन या अंध-विरोध करना नहीं, बल्कि संविधान की कसौटी पर हर नीति की ज़मीनी पड़ताल करना है।
-                    </p>
-                    <p class="text-[10.5px] text-gray-700 leading-relaxed mt-2 text-justify">
-                        डिजिटल युग में सूचनाओं की बाढ़ है, लेकिन प्रमाणिक और साहसी विश्लेषण का अभाव है। 'प्रतिप्रश्न भारत' तथ्य, साक्ष्य और विधिक मर्यादाओं के दायरे में रहकर जनता के सवालों को सीधे नीति-नियंताओं के सामने रखेगा।
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-4 mt-3 pt-2.5 border-t text-[9.5px] text-gray-800 bg-white p-2 border">
-                        <div>
-                            <strong>संपादकीय नेतृत्व:</strong><br>
-                            लक्ष्मी नारायण वशिष्ठ (मुख्य संपादक एवं संस्थापक)<br>
-                            तनुजा जोशी (वरिष्ठ संवाददाता एवं आर्थिक-पर्यावरण ब्यूरो)
-                        </div>
-                        <div>
-                            <strong>शिकायत निवारण तंत्र (Grievance Officer):</strong><br>
-                            विकास शर्मा (शिकायत निवारण अधिकारी)<br>
-                            ईमेल: grievances@pratiprashnabharat.in
-                        </div>
+                    <div>
+                        <strong>शिकायत निवारण तंत्र (Grievance Officer):</strong><br>
+                        विकास शर्मा (शिकायत निवारण अधिकारी)<br>
+                        ईमेल: grievances@pratiprashnabharat.in
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
 
-        <footer class="border-t border-black pt-1 text-[8.5px] text-gray-600 flex justify-between items-center">
+        <footer class="border-t border-black pt-1 text-[8.5px] text-gray-600 flex justify-between items-center mt-4">
             <span>प्रतिप्रश्न भारत (राष्ट्रीय विमर्श)</span>
             <span>संवैधानिक जवाबदेही विशेषांक</span>
             <span class="font-bold text-gray-900">पृष्ठ 2 / 4</span>
         </footer>
     </div>
 
-    <!-- ================= PAGE 3 ================= -->
+    <!-- =========================================================
+         PAGE 3: ज़मीनी पड़ताल & जन-सरोकार (प्रदूषण, महंगाई, मेरठ)
+         ========================================================= -->
     <div class="page-sheet">
-        <div class="flex-1 flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center border-b border-black pb-0.5 mb-2 text-[9px] font-bold text-gray-800 uppercase">
-                    <span>प्रतिप्रश्न भारत • ज़मीनी पड़ताल & जन-आवाज़</span>
-                    <span>गुरुवार, 15 अक्टूबर 2026</span>
-                    <span class="text-red-800">पृष्ठ 3</span>
+        <div>
+            <div class="flex justify-between items-center border-b border-black pb-0.5 mb-2.5 text-[9px] font-bold text-gray-800 uppercase">
+                <span>प्रतिप्रश्न भारत • ज़मीनी पड़ताल & जन-आवाज़</span>
+                <span>गुरुवार, 15 अक्टूबर 2026</span>
+                <span class="text-red-800">पृष्ठ 3</span>
+            </div>
+
+            <!-- Pollution Story (Tanuja Joshi) -->
+            <article class="border-b border-gray-300 pb-3">
+                <span class="bg-amber-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">पर्यावरण & जन-स्वास्थ्य</span>
+                <h3 class="text-base font-black text-gray-950 serif-hindi leading-snug mt-1">
+                    अक्टूबर की शुरुआत के साथ ही दिल्ली-एनसीआर की हवा में घुला 'धीमा ज़हर': ग्रैप के कागज़ी फरमानों के बीच पिसती आम जनता
+                </h3>
+                <div class="text-[9px] text-gray-700 font-bold my-1 flex justify-between border-b pb-0.5">
+                    <span>✍️ <strong>तनुजा जोशी</strong> (वरिष्ठ संवाददाता) | प्रतिप्रश्न भारत</span>
+                    <span class="text-amber-900">ग्राउंड हेल्थ रिपोर्ट</span>
                 </div>
+                <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-1.5 gap-4">
+                    <div class="border-col">
+                        <p><strong>नई दिल्ली:</strong> हर साल की तरह इस बार भी अक्टूबर का दूसरा पखवाड़ा शुरू होते ही देश की राजधानी और समूचे एनसीआर की आबोहवा में ज़हरीला धुंधलका छाने लगा है। कई इलाकों में वायु गुणवत्ता सूचकांक (AQI) 300 के पार 'बहुत खराब' श्रेणी में दर्ज किया जा रहा है। ग्रेडेड रिस्पांस एक्शन प्लान (GRAP) के चरण-1 और 2 लागू करने की कागज़ी घोषणाएं हो चुकी हैं, लेकिन धरातल पर धूल नियंत्रण और कचरा जलाने पर कोई ठोस रोक नहीं है।</p>
+                    </div>
+                    <div>
+                        <p>प्रमुख अस्पतालों में सांस, एलर्जी और दमा के मरीजों की संख्या में 25% तक की वृद्धि देखी जा रही है। इसका सबसे बुरा असर छोटे बच्चों और बुज़ुर्गों पर पड़ रहा है। वायु गुणवत्ता प्रबंधन आयोग (CAQM) और स्थानीय निकायों के पास करोड़ों रुपये के ग्रीन सेस फंड मौजूद होने के बावजूद स्मॉग टावर और एंटी-स्मॉग गन केवल दिखावा साबित हो रहे हैं। स्वच्छ हवा नागरिकों का जीवन जीने का मौलिक अधिकार है।</p>
+                    </div>
+                </div>
+            </article>
 
-                <!-- Pollution Story -->
-                <article class="border-b border-gray-300 pb-2.5">
-                    <span class="bg-amber-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">पर्यावरण & जन-स्वास्थ्य</span>
-                    <h3 class="text-base font-black text-gray-950 serif-hindi leading-snug mt-1">
-                        अक्टूबर की शुरुआत के साथ ही दिल्ली-एनसीआर की हवा में घुला 'धीमा ज़हर': ग्रैप के कागज़ी फरमानों के बीच पिसती आम जनता
-                    </h3>
-                    <div class="text-[9px] text-gray-700 font-bold my-1 flex justify-between border-b pb-0.5">
-                        <span>✍️ <strong>तनुजा जोशी</strong> (वरिष्ठ संवाददाता) | प्रतिप्रश्न भारत</span>
-                        <span class="text-amber-900">ग्राउंड हेल्थ रिपोर्ट</span>
+            <!-- Inflation Story (Tanuja Joshi) -->
+            <article class="border-b border-gray-300 py-3">
+                <span class="bg-red-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">अर्थव्यवस्था & थाली की पड़ताल</span>
+                <h3 class="text-base font-black text-gray-950 serif-hindi leading-snug mt-1">
+                    त्योहारों की चमक पर महंगाई का ग्रहण: दाल, खाद्य तेल और हरी सब्जियों के दाम आसमान पर; बफर स्टॉक के दावे विफल
+                </h3>
+                <div class="text-[9px] text-gray-700 font-bold my-1 flex justify-between border-b pb-0.5">
+                    <span>✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत</span>
+                    <span class="text-red-900">मार्केट ज़मीनी समीक्षा</span>
+                </div>
+                <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-1.5 gap-4">
+                    <div class="border-col">
+                        <p><strong>नई दिल्ली:</strong> दशहरा और दिवाली से पहले देश के खुदरा बाजारों में महंगाई ने आम नागरिक की कमर तोड़ दी है। खाद्य तेलों पर आयात शुल्क में बदलाव के बाद सरसों और रिफाइंड तेल की कीमतों में 20 से 30 रुपये प्रति लीटर का उछाल आया है, वहीं दालें और हरी सब्जियां भी मध्यमवर्गीय परिवारों की पहुंच से बाहर होती जा रही हैं। प्याज और टमाटर के खुदरा भाव 50 से 70 रुपये प्रति किलो पर बने हुए हैं।</p>
                     </div>
-                    <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-1.5 gap-4">
-                        <div class="border-col">
-                            <p><strong>नई दिल्ली:</strong> हर साल की तरह इस बार भी अक्टूबर का दूसरा पखवाड़ा शुरू होते ही देश की राजधानी और समूचे एनसीआर की आबोहवा में ज़हरीला धुंधलका छाने लगा है। कई इलाकों में वायु गुणवत्ता सूचकांक (AQI) 300 के पार 'बहुत खराब' श्रेणी में दर्ज किया जा रहा है। ग्रेडेड रिस्पांस एक्शन प्लान (GRAP) के चरण-1 और 2 लागू करने की कागज़ी घोषणाएं हो चुकी हैं, लेकिन धरातल पर धूल नियंत्रण और कचरा जलाने पर कोई ठोस रोक नहीं है।</p>
-                        </div>
-                        <div>
-                            <p>प्रमुख अस्पतालों में सांस, एलर्जी और दमा के मरीजों की संख्या में 25% तक की वृद्धि देखी जा रही है। इसका सबसे बुरा असर छोटे बच्चों और बुज़ुर्गों पर पड़ रहा है। वायु गुणवत्ता प्रबंधन आयोग (CAQM) और स्थानीय निकायों के पास करोड़ों रुपये के ग्रीन सेस फंड मौजूद होने के बावजूद स्मॉग टावर और एंटी-स्मॉग गन केवल दिखावा साबित हो रहे हैं। स्वच्छ हवा नागरिकों का जीवन जीने का मौलिक अधिकार है।</p>
-                        </div>
+                    <div>
+                        <p>थोक और खुदरा मूल्य के बीच का भारी अंतर यह स्पष्ट करता है कि मुनाफे का बड़ा हिस्सा बिचौलियों की जेब में जा रहा है। सरकार द्वारा दालों और आवश्यक वस्तुओं के आपातकालीन बफर स्टॉक जारी करने के दावों का असर खुदरा मंडियों में दिखाई नहीं दे रहा। किसान को लागत का सही दाम नहीं मिल रहा, जबकि उपभोक्ता तिगुनी कीमत चुकाने पर मजबूर है।</p>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- Inflation Story -->
-                <article class="border-b border-gray-300 py-2.5">
-                    <span class="bg-red-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">अर्थव्यवस्था & थाली की पड़ताल</span>
-                    <h3 class="text-base font-black text-gray-950 serif-hindi leading-snug mt-1">
-                        त्योहारों की चमक पर महंगाई का ग्रहण: दाल, खाद्य तेल और हरी सब्जियों के दाम आसमान पर; बफर स्टॉक के दावे विफल
-                    </h3>
-                    <div class="text-[9px] text-gray-700 font-bold my-1 flex justify-between border-b pb-0.5">
-                        <span>✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत</span>
-                        <span class="text-red-900">मार्केट ज़मीनी समीक्षा</span>
-                    </div>
-                    <div class="grid grid-cols-2 text-[10.5px] leading-relaxed text-gray-800 text-justify mt-1.5 gap-4">
-                        <div
+            <!-- Crime Story (Meerut Case) -->
+            <article class="pt-2">
+                <span class="bg-zinc-800 text-white text-[8.5px] font-black px-1.5 py-0.2 uppercase">क्राइम इन्वेस्टिगेशन / मेरठ स्पेशल</span>
+                <h3 class="text-sm font-black text-gray-950 serif-hindi leading-snug mt-0.5">
+                    मेरठ का 'नीला ड्रम' हत्याकांड: सीमेंट, नमक और साजिश की परतों में छिपा अपराध; फॉरेंसिक साक्ष्यों से खुली गुत्थी
+                </h3>
+                <div class="text-[8.5px] text-gray-600 my-0.5">✍️ विशेष अपराध ब्यूरो | मेरठ ग्राउंड रिपोर्ट</div>
+               
