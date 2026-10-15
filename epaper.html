@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रतिप्रश्न भारत | दैनिक ई-अखबार (प्रथम अंक)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Mukta', sans-serif; background-color: #525659; }
+        .serif-hindi { font-family: 'Tiro Devanagari Hindi', serif; }
+        
+        /* A4 Newspaper Page Styling */
+        .newspaper-page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 12mm 15mm;
+            margin: 15px auto;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Print Settings for PDF Generation */
+        @media print {
+            body { background: transparent; }
+            .no-print { display: none !important; }
+            .newspaper-page {
+                margin: 0;
+                width: 100%;
+                min-height: 100vh;
+                box-shadow: none;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-900 text-justify">
+
+    <!-- Top Floating Download/Print Toolbar -->
+    <div class="no-print sticky top-0 z-50 bg-red-800 text-white p-3 shadow-lg flex justify-between items-center max-w-4xl mx-auto rounded-b-lg">
+        <div class="text-sm font-bold">
+            📰 प्रतिप्रश्न भारत — प्रथम स्थापना अंक (4 पृष्ठ)
+        </div>
+        <button onclick="window.print()" class="bg-white text-red-800 font-extrabold px-4 py-1.5 rounded shadow hover:bg-gray-100 transition flex items-center gap-2 text-sm">
+            📥 PDF डाउनलोड / प्रिंट करें
+        </button>
+    </div>
+
+    <!-- ==========================================
+         PAGE 1: मुख्य पृष्ठ (Front Page / Lead Story)
+         ========================================== -->
+    <div class="newspaper-page flex flex-col justify-between">
+        <div>
+            <!-- Masthead -->
+            <div class="text-center border-b-2 border-black pb-2">
+                <div class="text-xs font-bold tracking-widest text-gray-700 uppercase">डिजिटल दैनिक संस्करण • नई दिल्ली • प्रथम वर्ष • अंक-1</div>
+                <h1 class="text-6xl font-extrabold text-red-900 serif-hindi tracking-wider my-1">प्रतिप्रश्न भारत</h1>
+                <div class="flex justify-between items-center text-xs font-bold border-t border-b border-gray-400 py-1 px-2 mt-1">
+                    <span>वर्ष 1 | अंक 01</span>
+                    <span>चौथा स्तंभ, जन-जन के संग</span>
+                    <span>15 अक्टूबर 2026 | निःशुल्क डिजिटल प्रति</span>
+                </div>
+            </div>
+
+            <!-- Page 1 Lead: Kalam Jayanti Launch -->
+            <div class="mt-4">
+                <span class="bg-red-800 text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase">स्थापना विशेषांक</span>
+                <h2 class="text-2xl font-black text-gray-950 serif-hindi leading-snug mt-1">
+                    कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद
+                </h2>
+                <p class="text-xs font-bold text-red-800 mt-1">चौथा स्तंभ केवल सत्ता का दर्पण नहीं, बल्कि जनता की ढाल है—संवैधानिक जवाबदेही के संकल्प के साथ नई शुरुआत।</p>
+                <div class="text-[10px] text-gray-500 font-semibold my-1 border-b pb-1">
+                    ✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक) | नई दिल्ली
+                </div>
+
+                <!-- Photos Row -->
+                <div class="grid grid-cols-3 gap-2 my-2 bg-gray-50 p-2 border">
+                    <div class="text-center">
+                        <img src="file_000000007fd0820ea1d00770fa136db5%20(1).png" class="h-28 w-full object-cover object-top border">
+                        <p class="text-[9px] font-bold mt-1">डॉ. एपीजे अब्दुल कलाम</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="1792078500488%20(1).png" class="h-28 w-full object-cover object-top border">
+                        <p class="text-[9px] font-bold mt-1">लक्ष्मी नारायण वशिष्ठ (संपादक)</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="file_00000000f13c81f48f3bbf6654539d69.png" class="h-28 w-full object-contain bg-white border">
+                        <p class="text-[9px] font-bold mt-1">CVC सत्यनिष्ठा प्रतिज्ञा</p>
+                    </div>
+                </div>
+
+                <!-- Text Columns -->
+                <div class="grid grid-cols-2 gap-4 text-xs leading-relaxed text-gray-800 mt-2">
+                    <div>
+                        <p><strong>नई दिल्ली:</strong> 15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना, नैतिक शुचिता और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। डॉ. कलाम का दृढ़ विश्वास था कि सशक्त राष्ट्र का निर्माण केवल गगनचुंबी इमारतों से नहीं, बल्कि सत्यनिष्ठा, स्वतंत्र सोच और अंतिम पंक्ति में खड़े युवा के आत्मसम्मान से होता है।</p>
+                        <p class="mt-2">आज जब मुख्यधारा की पत्रकारिता पर सहमति और अनुनय का दबाव स्पष्ट दिखाई देता है, ऐसे ऐतिहासिक अवसर पर 'प्रतिप्रश्न भारत' का जन्म किसी दल या कॉरपोरेट के समर्थन के लिए नहीं, बल्कि लोकतंत्र के चौथे स्तंभ की बुनियादी मर्यादाओं को पुनर्स्थापित करने के लिए हुआ है।</p>
+                    </div>
+                    <div>
+                        <p><strong>सत्यनिष्ठा का सार्वजनिक संकल्प:</strong> मुख्य संपादक द्वारा केंद्रीय सतर्कता आयोग (CVC) के समक्ष ली गई सत्यनिष्ठा प्रतिज्ञा ही इस मंच का नैतिक संविधान है—न किसी प्रलोभन के आगे झुकना, न किसी अनुचित दबाव में कलम को मोड़ना।</p>
+                        <p class="mt-2">कलाम साहब ने सिखाया था कि सच्चा देशभक्त वह है जो अपने देश की कमियों पर पर्दा डालने के बजाय उन्हें सुधारने के लिए कड़वे सच का सामना करे। 'प्रतिप्रश्न भारत' उसी वैज्ञानिक चेतना और निडरता को अपनी कलम बनाएगा।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-[10px] text-gray-500 border-t pt-1 flex justify-between">
+            <span>प्रतिप्रश्न भारत (डिजिटल ई-पेपर)</span>
+            <span>पृष्ठ 1 / 4</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 2: सत्ता, नीति एवं विधिक विमर्श (Page 2)
+         ========================================== -->
+    <div class="newspaper-page flex flex-col justify-between">
+        <div>
+            <!-- Page Header -->
+            <div class="flex justify-between items-center border-b border-black pb-1 mb-3 text-xs font-bold text-gray-700">
+                <span>प्रतिप्रश्न भारत • राष्ट्रीय & संवैधानिक विमर्श</span>
+                <span>15 अक्टूबर 2026</span>
+                <span>पृष्ठ 2</span>
+            </div>
+
+            <!-- News 1: Supreme Court Apology -->
+            <div class="border-b pb-4">
+                <span class="bg-red-800 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">संवैधानिक जवाबदेही</span>
+                <h3 class="text-xl font-bold text-gray-950 serif-hindi mt-1 leading-snug">
+                    सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस का बिना शर्त माफीनामा: शांतिपूर्ण विरोध पर पाबंदियों पर अदालत सख्त; वैश्विक मंचों पर भी साख पर सवाल
+                </h3>
+                <div class="text-[10px] text-gray-500 my-1">✍️ विशेष विधिक डेस्क | नई दिल्ली</div>
+                
+                <div class="grid grid-cols-2 gap-4 text-xs leading-relaxed text-gray-800 mt-2">
+                    <p>राजधानी में नागरिकों के लोकतांत्रिक और शांतिपूर्ण विरोध प्रदर्शनों को रोकने के नाम पर मेट्रो स्टेशनों को बंद करने, इंटरनेट सेवाओं पर मनमानी रोक लगाने और धारा 144 के अंधाधुंध इस्तेमाल पर देश की सर्वोच्च अदालत में सरकार को भारी असहजता का सामना करना पड़ा है। सुप्रीम कोर्ट की कड़ी आपत्ति के बाद केंद्रीय गृह सचिव और दिल्ली पुलिस आयुक्त को अदालत के समक्ष बिना शर्त माफी (Unconditional Apology) का औपचारिक हलफनामा प्रस्तुत करना पड़ा।</p>
+                    <p>शीर्ष अदालत ने स्पष्ट किया कि सामान्य कानून-व्यवस्था के नाम पर नागरिकों के मौलिक अधिकारों (अनुच्छेद 19 व 21) और आवागमन की स्वतंत्रता का दमन नहीं किया जा सकता। वहीं अंतरराष्ट्रीय इंटरनेट ट्रैकर संस्थाओं और संयुक्त राष्ट्र (UN) से जुड़े मानवाधिकार निगरानी समूहों ने बार-बार होने वाले संचार शटडाउन पर चिंता जताई है, जिससे अंतरराष्ट्रीय स्तर पर देश की लोकतांत्रिक साख प्रभावित हो रही है।</p>
+                </div>
+            </div>
+
+            <!-- News 2: Editorial & Manifesto -->
+            <div class="mt-4 bg-zinc-50 p-4 border rounded">
+                <h4 class="text-sm font-bold text-red-900 border-b pb-1">हमारा संपादकीय घोषणापत्र एवं नीति</h4>
+                <p class="text-xs text-gray-800 mt-2 leading-relaxed">
+                    "सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों का पक्षधर बनकर जवाबदेही तय करेंगे।"
+                </p>
+                <div class="grid grid-cols-2 gap-3 text-[11px] text-gray-700 mt-3 pt-2 border-t">
+                    <div>
+                        <strong>मुख्य संपादक:</strong> लक्ष्मी नारायण वशिष्ठ<br>
+                        <strong>संपादकीय दृष्टिकोण:</strong> तथ्य-आधारित एवं निष्पक्ष खोजी पत्रकारिता
+                    </div>
+                    <div>
+                        <strong>शिकायत निवारण अधिकारी:</strong> विकास शर्मा<br>
+                        <strong>विधिक संपर्क:</strong> grievances@pratiprashnabharat.in
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-[10px] text-gray-500 border-t pt-1 flex justify-between">
+            <span>प्रतिप्रश्न भारत (डिजिटल ई-पेपर)</span>
+            <span>पृष्ठ 2 / 4</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 3: ज़मीनी पड़ताल & जन-सरोकार (Page 3)
+         ========================================== -->
+    <div class="newspaper-page flex flex-col justify-between">
+        <div>
+            <!-- Page Header -->
+            <div class="flex justify-between items-center border-b border-black pb-1 mb-3 text-xs font-bold text-gray-700">
+                <span>प्रतिप्रश्न भारत • ज़मीनी पड़ताल & जन-आवाज़</span>
+                <span>15 अक्टूबर 2026</span>
+                <span>पृष्ठ 3</span>
+            </div>
+
+            <!-- Tanuja Joshi: Pollution Report -->
+            <div class="border-b pb-3">
+                <span class="bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">पर्यावरण & जन-स्वास्थ्य</span>
+                <h3 class="text-base font-bold text-gray-950 serif-hindi mt-1 leading-snug">
+                    अक्टूबर की शुरुआत के साथ ही दिल्ली-एनसीआर की हवा में घुला 'धीमा ज़हर': ग्रैप के कागज़ी फरमानों के बीच पिसती जनता
+                </h3>
+                <div class="text-[10px] text-gray-600 font-semibold my-1">
+                    ✍️ <strong>तनुजा जोशी</strong> (वरिष्ठ संवाददाता) | प्रतिप्रश्न भारत
+                </div>
+                <div class="text-xs leading-relaxed text-gray-800 space-y-1">
+                    <p>हर साल की तरह इस बार भी अक्टूबर का दूसरा पखवाड़ा शुरू होते ही समूचे एनसीआर की आबोहवा में ज़हरीला धुंधलका छाने लगा है। वायु गुणवत्ता सूचकांक (AQI) 300 के पार 'बहुत खराब' श्रेणी में दर्ज हो रहा है। अस्पतालों में सांस और एलर्जी के मरीजों की संख्या 25% तक बढ़ गई है। करोड़ों रुपये के ग्रीन सेस फंड होने के बावजूद एंटी-स्मॉग गन और पानी के छिड़काव केवल फोटो-ऑप बनकर रह गए हैं।</p>
+                </div>
+            </div>
+
+            <!-- Tanuja Joshi: Inflation Report -->
+            <div class="border-b py-3">
+                <span class="bg-red-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">अर्थव्यवस्था & आम थाली</span>
+                <h3 class="text-base font-bold text-gray-950 serif-hindi mt-1 leading-snug">
+                    त्योहारों की चमक पर महंगाई का ग्रहण: दाल, खाद्य तेल और हरी सब्जियों के दाम आसमान पर
+                </h3>
+                <div class="text-[10px] text-gray-600 font-semibold my-1">
+                    ✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत
+                </div>
+                <div class="text-xs leading-relaxed text-gray-800 space-y-1">
+                    <p>दशहरा और दिवाली से पहले खुदरा बाजारों में खाद्य तेलों और दालों के दाम में तीव्र उछाल ने आम परिवारों का बजट बिगाड़ दिया है। सरसों तेल 20 से 30 रुपये प्रति लीटर तक महंगा हुआ है। थोक और खुदरा भाव के अंतर से बिचौलिए मुनाफा कमा रहे हैं, जबकि किसान और उपभोक्ता दोनों बेहाल हैं। सरकारी बफर स्टॉक के दावों का असर ज़मीन पर नदारद है।</p>
+                </div>
+            </div>
+
+            <!-- Crime Investigation: Meerut Case -->
+            <div class="pt-3">
+                <span class="bg-zinc-800 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">क्राइम इन्वेस्टिगेशन</span>
+                <h3 class="text-base font-bold text-gray-950 serif-hindi mt-1 leading-snug">
+                    मेरठ का 'नीला ड्रम' हत्याकांड: सीमेंट, नमक और साजिश की परतों में छिपा अपराध; फॉरेंसिक साक्ष्यों से खुली गुत्थी
+                </h3>
+                <div class="text-[10px] text-gray-500 my-1">✍️ विशेष अपराध ब्यूरो | मेरठ</div>
+                <p class="text-xs leading-relaxed text-gray-800">
+                    पश्चिमी उत्तर प्रदेश के मेरठ में एक किराए के मकान में नीले प्लास्टिक ड्रम में नमक, चूना और सीमेंट भरकर शव को हमेशा के लिए दफन करने की रोंगटे खड़े कर देने वाली साजिश का पर्दाफाश हुआ है। फॉरेंसिक लैब (FSL) और मोबाइल सर्विलांस के सहारे पुलिस ने आरोपियों को दबोचा, परंतु घनी बस्तियों में सत्यापन की चूक पर गंभीर सवाल खड़े हुए हैं।
+                </p>
+            </div>
+        </div>
+
+        <div class="text-[10px] text-gray-500 border-t pt-1 flex justify-between">
+            <span>प्रतिप्रश्न भारत (डिजिटल ई-पेपर)</span>
+            <span>पृष्ठ 3 / 4</span>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 4: खेल विमर्श एवं समीक्षा (Page 4)
+         ========================================== -->
+    <div class="newspaper-page flex flex-col justify-between">
+        <div>
+            <!-- Page Header -->
+            <div class="flex justify-between items-center border-b border-black pb-1 mb-3 text-xs font-bold text-gray-700">
+                <span>प्रतिप्रश्न भारत • खेल विमर्श & अंतिम पृष्ठ</span>
+                <span>15 अक्टूबर 2026</span>
+                <span>पृष्ठ 4</span>
+            </div>
+
+            <!-- Sports Lead -->
+            <div>
+                <span class="bg-red-800 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">हैदराबाद T20I स्पेशल पड़ताल</span>
+                <h3 class="text-xl font-bold text-gray-950 serif-hindi mt-1 leading-snug">
+                    हैदराबाद में घरेलू मैदान पर लुटाए 247 रन: शाई होप का शतक, लचर गेंदबाजी और मुख्य कोच गौतम गंभीर की रणनीति पर तीखे सवाल
+                </h3>
+                <div class="text-[10px] text-gray-500 my-1">✍️ विशेष खेल डेस्क | हैदराबाद ग्राउंड रिपोर्ट</div>
+
+                <p class="text-xs leading-relaxed text-gray-800 mt-2">
+                    राजीव गांधी इंटरनेशनल स्टेडियम में चौथे टी20 मुकाबले में भारत को वेस्टइंडीज के हाथों 24 रनों से करारी शिकस्त झेलनी पड़ी, जिससे 5 मैचों की द्विपक्षीय सीरीज 2-2 की बराबरी पर आ गई है। पहले गेंदबाजी चुनकर 247 रन लुटा देना और शाई होप (102 रन) के सामने भारतीय आक्रमण का बिखर जाना मुख्य कोच गौतम गंभीर की गेंदबाजी रणनीति पर बड़ा सवालिया निशान है।
+                </p>
+
+                <!-- Scoreboard Box -->
+                <div class="grid grid-cols-3 gap-2 bg-red-50 p-2 border my-3 text-[11px] text-gray-800">
+                    <div><strong>WI:</strong> 247/3 (20 ov)<br>शाई होप: 102 (50)</div>
+                    <div><strong>भारत:</strong> 223/10 (19.3)<br>संजू: 56, तिलक: 43</div>
+                    <div><strong>फ्लॉप शो:</strong><br>मयंक 0/52, अर्शदीप 1/52</div>
+                </div>
+
+                <p class="text-xs leading-relaxed text-gray-800">
+                    संजू सैमसन (56) और तिलक वर्मा (43) के आक्रामक प्रयासों के बावजूद कीमो पॉल के 5 विकेटों के सामने पूरी टीम 223 पर सिमट गई। जसप्रीत बुमराह की अनुपस्थिति में बैकअप गेंदबाजों का कोई स्पष्ट रोडमैप न होना और लगातार हो रहे प्रयोग कोच के दृष्टिकोण को कठघरे में खड़ा करते हैं।
+                </p>
+
+                <!-- संपादक विशेष टिप्पणी (Editorial Note at the end) -->
+                <div class="bg-amber-50 border-l-4 border-amber-600 p-3 rounded-r-md mt-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">संपादक विशेष</span>
+                        <span class="text-xs font-bold text-gray-900">लक्ष्मी नारायण वशिष्ठ</span>
+                    </div>
+                    <p class="text-xs text-gray-800 font-medium italic leading-relaxed mt-1">
+                        "आखिर क्या कारण है कि अपने ही घरेलू मैदानों पर जानबूझकर गेंदबाजों को पंगु बना देने वाली और अति-सपाट या अति-डॉक्टर्ड पिचें तैयार की जा रही हैं? क्या यह अपनी ही टीम के लिए उल्टा तीर साबित नहीं हो रहा? हमें नहीं भूलना चाहिए कि ठीक 3 वर्ष पहले (2023) वनडे वर्ल्ड कप के फ़ाइनल में भी ज़रूरत से ज़्यादा पिच के साथ की गई इसी तरह की छेड़छाड़ ने भारत से विश्व विजेता बनने का ऐतिहासिक मौका छीन लिया था। जब तक पिच क्यूरेशन और टीम रणनीति में वास्तविक खेल भावना और गेंदबाजों के सम्मान को जगह नहीं मिलेगी, तब तक ऐसे आघात बार-बार दोहराए जाते रहेंगे।"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-[10px] text-gray-500 border-t pt-2 flex justify-between items-center">
+            <span>मुद्रक एवं प्रकाशक: प्रतिप्रश्न भारत मीडिया समूह, नई दिल्ली</span>
+            <span>पृष्ठ 4 / 4 (समाप्त)</span>
+        </div>
+    </div>
+
+</body>
+  </html>
+  
