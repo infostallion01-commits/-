@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <title>प्रतिप्रश्न भारत | दैनिक ई-अखबार</title>
+    <title>प्रतिप्रश्न भारत | दैनिक ई-अखबार (16 अक्टूबर 2026)</title>
     <style>
         * { box-sizing: border-box; }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #2b2b2b;
             margin: 0;
             padding: 12px;
@@ -18,57 +18,56 @@
             margin-bottom: 15px;
         }
         .action-bar button {
-            background-color: #b91c1c;
+            background-color: #880000;
             color: #ffffff;
             border: none;
             padding: 12px 24px;
             font-size: 15px;
             font-weight: bold;
-            border-radius: 6px;
+            border-radius: 4px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .sheet {
             background-color: #ffffff;
             width: 100%;
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto 20px auto;
-            padding: 24px;
-            border-radius: 2px;
+            padding: 24px 28px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        .top-bar {
+        .top-meta {
             display: flex;
             justify-content: space-between;
             font-size: 10px;
             font-weight: bold;
             border-bottom: 1px solid #000;
-            padding-bottom: 3px;
+            padding-bottom: 4px;
         }
         .masthead {
             text-align: center;
             border-bottom: 3px double #000;
-            padding: 8px 0;
+            padding: 10px 0;
         }
         .masthead h1 {
-            color: #7f1d1d;
-            font-size: 34px;
+            color: #880000;
+            font-size: 38px;
             margin: 0;
             font-weight: 900;
         }
-        .meta-strip {
+        .date-strip {
             display: flex;
             justify-content: space-between;
-            background-color: #f3f4f6;
+            background-color: #f2f2f2;
             border-top: 1px solid #000;
             border-bottom: 1px solid #000;
-            padding: 4px 6px;
+            padding: 4px 8px;
             font-size: 11px;
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 6px;
         }
         .badge {
-            background-color: #7f1d1d;
+            background-color: #880000;
             color: #fff;
             font-size: 10px;
             font-weight: bold;
@@ -77,64 +76,32 @@
             margin-top: 10px;
         }
         h2.title {
-            font-size: 18px;
+            font-size: 19px;
             margin: 6px 0;
             line-height: 1.35;
             color: #000;
         }
         .byline {
-            font-size: 10.5px;
-            color: #4b5563;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 3px 0;
+            font-size: 11px;
+            color: #444;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 4px 0;
             margin-bottom: 10px;
-        }
-        .img-grid {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
-            background-color: #f9fafb;
-            padding: 8px;
-            border: 1px solid #e5e7eb;
-        }
-        .img-grid div {
-            flex: 1;
-            text-align: center;
-        }
-        .img-grid img {
-            width: 100%;
-            height: 125px;
-            object-fit: cover;
-            border: 1px solid #d1d5db;
-        }
-        .img-grid p {
-            font-size: 9.5px;
-            font-weight: bold;
-            margin: 3px 0 0 0;
         }
         .text {
             font-size: 12px;
-            line-height: 1.55;
+            line-height: 1.6;
             text-align: justify;
-            color: #1f2937;
+            color: #222;
         }
         .box {
             background-color: #fef2f2;
-            border-left: 4px solid #b91c1c;
+            border: 1px solid #fecaca;
+            border-left: 4px solid #880000;
             padding: 10px;
             margin-top: 12px;
             font-size: 11.5px;
-        }
-        .score {
-            background-color: #fef2f2;
-            border: 1px solid #fecaca;
-            padding: 8px;
-            margin: 10px 0;
-            display: flex;
-            justify-content: space-around;
-            font-size: 11px;
-            font-weight: bold;
         }
         .footer {
             border-top: 1.5px solid #000;
@@ -142,18 +109,12 @@
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
-            font-size: 9.5px;
+            font-size: 10px;
             font-weight: bold;
-            color: #4b5563;
+            color: #555;
         }
-
-        /* PRINT SETTINGS: No freezing, clear multi-page division */
         @media print {
-            body {
-                background: none !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
+            body { background: none !important; padding: 0 !important; margin: 0 !important; }
             .action-bar { display: none !important; }
             .sheet {
                 width: 100% !important;
@@ -170,154 +131,149 @@
 <body>
 
     <div class="action-bar">
-        <button onclick="setTimeout(function(){ window.print(); }, 200);">📥 PDF डाउनलोड / प्रिंट करें</button>
+        <button onclick="window.print()">📥 आज का 4-पृष्ठ ई-अखबार डाउनलोड करें</button>
     </div>
 
-    <!-- PAGE 1 -->
+    <!-- ================= PAGE 1 ================= -->
     <div class="sheet">
-        <div class="top-bar">
+        <div class="top-meta">
             <span>राष्ट्रीय दैनिक संस्करण • नई दिल्ली</span>
             <span>सत्यनिष्ठा • पारदर्शिता • निर्भीकता</span>
-            <span>प्रथम वर्ष • अंक 01</span>
+            <span>अंक 02</span>
         </div>
         <div class="masthead">
             <h1>प्रतिप्रश्न भारत</h1>
-            <p style="margin:2px 0 0 0; font-size:11px; font-weight:bold;">चौथा स्तंभ, जन-जन के संग</p>
+            <p style="margin:3px 0 0 0; font-size:12px; font-weight:bold;">चौथा स्तंभ, जन-जन के संग</p>
         </div>
-        <div class="meta-strip">
-            <span>वर्ष 1 | अंक 01</span>
-            <span>नई दिल्ली, गुरुवार, 15 अक्टूबर 2026</span>
-            <span>पृष्ठ 1 / 4</span>
+        <div class="date-strip">
+            <span>वर्ष 1 | अंक 02</span>
+            <span>नई दिल्ली, शुक्रवार, 16 अक्टूबर 2026</span>
+            <span>पृष्ठ 1 / 4 (मुख्य पृष्ठ)</span>
         </div>
 
         <div>
-            <span class="badge">स्थापना विशेषांक / मुख्य लीड आलेख</span>
-            <h2 class="title">कलाम के सपनों का भारत और सत्यनिष्ठा का उद्घोष: 15 अक्टूबर जयंती पर स्वतंत्र मंच 'प्रतिप्रश्न भारत' का शंखनाद</h2>
-            <div style="color:#7f1d1d; font-size:12px; font-weight:bold; margin-bottom:6px;">चौथा स्तंभ केवल सत्ता का दर्पण नहीं, बल्कि जनता की ढाल है।</div>
-            <div class="byline">✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक)</div>
+            <span class="badge">न्यायिक संपादकीय / मुख्य लीड</span>
+            <h2 class="title">मेरठ का सौरभ राजपूत हत्याकांड: 'शरद बिरधीचंद' के पंच-सिद्धांत, Adipocere का विज्ञान और धारा 351 BNSS; अदालत ने परिस्थितिजन्य साक्ष्यों से कसी नकेल</h2>
+            <div class="byline">✍️ <strong>लक्ष्मी नारायण वशिष्ठ</strong> (मुख्य संपादक एवं संस्थापक) | विशेष विधिक समीक्षा</div>
 
-            <div class="img-grid">
-                <div>
-                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_000000007fd0820ea1d00770fa136db5%20(1).png" alt="डॉ. कलाम" loading="eager">
-                    <p>डॉ. कलाम</p>
-                </div>
-                <div>
-                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/1792078500488%20(1).png" alt="लक्ष्मी नारायण वशिष्ठ" loading="eager">
-                    <p>लक्ष्मी नारायण वशिष्ठ</p>
-                </div>
-                <div>
-                    <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/file_00000000f13c81f48f3bbf6654539d69.png" alt="CVC प्रतिज्ञा" style="object-fit:contain; background:#fff;" loading="eager">
-                    <p>CVC सत्यनिष्ठा</p>
+            <div style="display:flex; gap:12px; margin-bottom:12px; background:#f9fafb; padding:10px; border:1px solid #ddd; align-items:center;">
+                <img src="https://raw.githubusercontent.com/infostallion01-commits/-/main/1792078500488%20(1).png" style="width:75px; height:75px; border-radius:50%; object-fit:cover; border:2px solid #880000;">
+                <div style="font-size:11px; line-height:1.4;">
+                    <strong>संपादकीय पीठ:</strong> लक्ष्मी नारायण वशिष्ठ<br>
+                    <span style="color:#666;">सत्र न्यायालय के फैसले में परिस्थितियों की अखंड श्रृंखला और वैज्ञानिक मेडिकल न्यायशास्त्र का ऐतिहासिक विश्लेषण।</span>
                 </div>
             </div>
 
             <div class="text">
-                <p><strong>नई दिल्ली:</strong> 15 अक्टूबर केवल एक तारीख नहीं, बल्कि उस वैज्ञानिक चेतना और अदम्य राष्ट्र-दृष्टि का स्मरण पर्व है, जिसे 'मिसाइल मैन' डॉ. एपीजे अब्दुल कलाम ने भारत की आत्मा में रोपा था। आज जब मुख्यधारा की पत्रकारिता पर सहमति और अनुनय का दबाव स्पष्ट दिखाई देता है, ऐसे समय में 'प्रतिप्रश्न भारत' का जन्म लोकतंत्र के चौथे स्तंभ की बुनियादी मर्यादाओं को पुनर्स्थापित करने के लिए हुआ है।</p>
-                <p>केंद्रीय सतर्कता आयोग (CVC) के समक्ष ली गई सत्यनिष्ठा प्रतिज्ञा ही इस मंच का नैतिक संविधान है। न किसी दबाव में झुकना और न ही सत्य से विमुख होना हमारा मूल ध्येय है।</p>
+                <p><strong>मेरठ/नई दिल्ली:</strong> मेरठ के जिस सौरभ राजपूत हत्याकांड ने पूरे प्रदेश को झकझोर कर रख दिया था, उसमें जिला एवं सत्र न्यायालय का विस्तृत कानूनी विश्लेषण अब सामने आ चुका है। एक न्यायिक संपादक के नज़रिए से देखें तो इस मामले का असली महत्व केवल अपराध की बर्बरता में नहीं, बल्कि इस बात में है कि अदालत ने बिना प्रत्यक्षदर्शी के, परिस्थितियों के ताने-बाने को कानून की सख्त कसौटी पर कैसे कसा है।</p>
+                <p><strong>1. शरद बिरधीचंद के पंच-सिद्धांत:</strong> अदालत ने स्पष्ट किया कि परिस्थितिजन्य साक्ष्य में "शायद" और "अवश्य" का अंतर ही न्याय की धुरी है। अभियोजन ने साबित किया कि अपराध केवल और केवल अभियुक्तों द्वारा ही संभव था।</p>
+                <p><strong>2. Adipocere का चिकित्सीय प्रमाण:</strong> 14 दिन बाद सीलबंद ड्रम से निकले शव में 'Adipocere Formation' (मोमीकरण) ने डॉ. मोदी की 'मेडिकल ज्यूरिसप्रूडेंस' के आधार पर वारदात की सटीक टाइमलाइन (3-4 मार्च) की वैज्ञानिक पुष्टि की।</p>
             </div>
         </div>
 
         <div class="footer">
-            <span>प्रतिप्रश्न भारत (डिजिटल ई-पेपर)</span>
-            <span>अंक 01 • नई दिल्ली</span>
+            <span>प्रतिप्रश्न भारत (राष्ट्रीय संस्करण)</span>
+            <span>शुक्रवार, 16 अक्टूबर 2026</span>
             <span>पृष्ठ 1 / 4</span>
         </div>
     </div>
 
-    <!-- PAGE 2 -->
+    <!-- ================= PAGE 2 ================= -->
     <div class="sheet">
-        <div class="top-bar">
-            <span>प्रतिप्रश्न भारत • राष्ट्रीय & संवैधानिक विमर्श</span>
-            <span>15 अक्टूबर 2026</span>
+        <div class="top-meta">
+            <span>प्रतिप्रश्न भारत • राजधानी & सत्ता विमर्श</span>
+            <span>16 अक्टूबर 2026</span>
             <span>पृष्ठ 2 / 4</span>
         </div>
 
-        <span class="badge">संवैधानिक जवाबदेही / लीड रिपोर्ट</span>
-        <h2 class="title">सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस का बिना शर्त माफीनामा: शांतिपूर्ण विरोध पर पाबंदियों पर अदालत सख्त</h2>
-        <div class="byline">✍️ रिपोर्ट: विशेष विधिक डेस्क | प्रतिप्रश्न भारत</div>
+        <span class="badge">राजनीतिक पड़ताल / एक्सक्लूसिव</span>
+        <h2 class="title">कनॉट प्लेस के सेंट्रल पार्क पर NDMC का ताला: CJP के 'तिरंगा मार्च' व INDIA गठबंधन से डरी केंद्र सरकार? 'AA इंजन' को चुनौती</h2>
+        <div class="byline">✍️ रिपोर्ट: विशेष राजनीतिक डेस्क | आदेश सं.: D/181/DH/PA/2026</div>
+
+        <div style="text-align:center; margin:10px 0; background:#f9fafb; padding:8px; border:1px solid #ddd;">
+            <img src="20261016003222_01.jpg" style="max-height:150px; max-width:100%; object-fit:contain;" onerror="this.src='https://raw.githubusercontent.com/infostallion01-commits/-/main/20261016003222_01.jpg';">
+            <p style="font-size:9.5px; font-weight:bold; margin:3px 0 0 0;">NDMC द्वारा जारी आधिकारिक सार्वजनिक नोटिस (16 व 17 अक्टूबर बंदी)</p>
+        </div>
 
         <div class="text">
-            <p><strong>नई दिल्ली:</strong> राजधानी में नागरिकों के लोकतांत्रिक विरोध प्रदर्शनों को रोकने के लिए मेट्रो स्टेशनों को बंद करने और धारा 144 के अंधाधुंध इस्तेमाल पर सुप्रीम कोर्ट की कड़ी आपत्ति के बाद केंद्रीय गृह सचिव और दिल्ली पुलिस आयुक्त को बिना शर्त माफी (Unconditional Apology) का हलफनामा देना पड़ा है।</p>
-            <p>शीर्ष अदालत ने रेखांकित किया कि सामान्य कानून-व्यवस्था के नाम पर नागरिकों के मौलिक अधिकारों (अनुच्छेद 19 व 21) का हनन नहीं किया जा सकता। अंतरराष्ट्रीय मानवाधिकार समूहों ने भी बार-बार होने वाले संचार शटडाउन पर चिंता जताई है।</p>
+            <p><strong>नई दिल्ली:</strong> नई दिल्ली नगरपालिका परिषद (NDMC) द्वारा 16 और 17 अक्टूबर को कनॉट प्लेस स्थित सेंट्रल पार्क को बंद करने का आदेश केवल सामान्य प्रशासनिक कदम नहीं, बल्कि छात्रों और विपक्षी एकजुटता से उपजी सरकारी घबराहट का प्रमाण है। कॉकरोच जनता पार्टी (CJP) द्वारा प्रस्तावित 'लहरा दो तिरंगा' मार्च और INDIA गठबंधन के कड़े रुख के बीच सत्ता पक्ष की यह पाबंदी यह दिखाती है कि 'AA इंजन' की व्यवस्था अब युवाओं के सवालों से असहज हो चुकी है।</p>
+            <p>शांतिपूर्ण विरोध पर पाबंदियों को लेकर हाल ही में सुप्रीम कोर्ट में केंद्र और दिल्ली पुलिस को बिना शर्त माफी मांगनी पड़ी है, इसके बावजूद सार्वजनिक स्थलों पर ताले जड़ने की कार्यप्रणाली बदस्तूर जारी है।</p>
         </div>
 
         <div class="box">
-            <h4 style="margin:0 0 4px 0; color:#7f1d1d;">संपादकीय घोषणापत्र</h4>
-            <p style="margin:0; line-height:1.5;">"सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों के पक्षधर हैं।"</p>
-            <div style="display:flex; justify-content:space-between; margin-top:8px; font-size:10px; border-top:1px solid #e5e7eb; padding-top:4px;">
-                <div><strong>संपादक:</strong> लक्ष्मी नारायण वशिष्ठ</div>
+            <h4 style="margin:0 0 4px 0; color:#880000;">संपादकीय नीति</h4>
+            <p style="margin:0; line-height:1.4;">"सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों के पक्षधर हैं।"</p>
+            <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:10px; border-top:1px solid #e5e7eb; padding-top:4px;">
+                <div><strong>मुख्य संपादक:</strong> लक्ष्मी नारायण वशिष्ठ</div>
                 <div><strong>शिकायत अधिकारी:</strong> विकास शर्मा (grievances@pratiprashnabharat.in)</div>
             </div>
         </div>
 
         <div class="footer">
-            <span>प्रतिप्रश्न भारत (राष्ट्रीय विमर्श)</span>
-            <span>संवैधानिक जवाबदेही</span>
+            <span>प्रतिप्रश्न भारत (राजधानी विमर्श)</span>
+            <span>सेंट्रल पार्क विशेष पड़ताल</span>
             <span>पृष्ठ 2 / 4</span>
         </div>
     </div>
 
-    <!-- PAGE 3 -->
+    <!-- ================= PAGE 3 ================= -->
     <div class="sheet">
-        <div class="top-bar">
-            <span>प्रतिप्रश्न भारत • ज़मीनी पड़ताल & जन-सरोकार</span>
-            <span>15 अक्टूबर 2026</span>
+        <div class="top-meta">
+            <span>प्रतिप्रश्न भारत • पर्यावरण & अर्थव्यवस्था</span>
+            <span>16 अक्टूबर 2026</span>
             <span>पृष्ठ 3 / 4</span>
         </div>
 
-        <div style="border-bottom:1px solid #e5e7eb; padding-bottom:10px; margin-bottom:10px;">
-            <span class="badge" style="background-color:#b45309;">पर्यावरण & जन-स्वास्थ्य</span>
+        <div style="border-bottom:1px solid #ddd; padding-bottom:12px; margin-bottom:12px;">
+            <span class="badge" style="background:#b45309;">पर्यावरण & जन-स्वास्थ्य</span>
             <h3 style="font-size:16px; margin:4px 0;">दिल्ली-एनसीआर में हवा हुई ज़हरीली: ग्रैप के कागज़ी फरमानों के बीच पिसती जनता</h3>
             <div class="byline">✍️ <strong>तनुजा जोशी</strong> (वरिष्ठ संवाददाता) | प्रतिप्रश्न भारत</div>
-            <p class="text">अक्टूबर के दूसरे पखवाड़े में ही AQI 300 के पार पहुँच गया है। अस्पतालों में सांस के मरीजों में 25% तक वृद्धि हुई है। करोड़ों के ग्रीन फंड के बावजूद एंटी-स्मॉग गन केवल फोटो-ऑप बनकर रह गए हैं।</p>
-        </div>
-
-        <div style="border-bottom:1px solid #e5e7eb; padding-bottom:10px; margin-bottom:10px;">
-            <span class="badge">अर्थव्यवस्था</span>
-            <h3 style="font-size:16px; margin:4px 0;">त्योहारों पर महंगाई की मार: खाद्य तेल, दाल और हरी सब्जियों के दाम आसमान पर</h3>
-            <div class="byline">✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत</div>
-            <p class="text">खाद्य तेलों में 20 से 30 रुपये प्रति लीटर का उछाल आया है। प्याज और टमाटर 50 से 70 रुपये प्रति किलो पर बिक रहे हैं। सरकारी बफर स्टॉक का कोई असर मंडियों में नहीं दिख रहा है।</p>
+            <p class="text">
+                अक्टूबर के दूसरे पखवाड़े में ही AQI 300 के पार पहुँच गया है। अस्पतालों में सांस और एलर्जी के मरीजों में 25% तक वृद्धि हुई है। करोड़ों के ग्रीन फंड मौजूद होने के बावजूद स्मॉग टावर और पानी का छिड़काव केवल फोटो-ऑप साबित हो रहे हैं।
+            </p>
         </div>
 
         <div>
-            <span class="badge" style="background-color:#374151;">क्राइम पड़ताल</span>
-            <h3 style="font-size:15px; margin:4px 0;">मेरठ का 'नीला ड्रम' हत्याकांड: नमक, चूना और सीमेंट में दफन साजिश का पर्दाफाश</h3>
-            <div class="byline">✍️ अपराध ब्यूरो | मेरठ ग्राउंड रिपोर्ट</div>
-            <p class="text">किराए के मकान में ड्रम के भीतर शव को सीमेंट से सील करने की साजिश फॉरेंसिक साक्ष्यों और सर्विलांस के सहारे पकड़ी गई। यह किराएदार सत्यापन की घोर लापरवाही उजागर करता है।</p>
+            <span class="badge">अर्थव्यवस्था & थाली की पड़ताल</span>
+            <h3 style="font-size:16px; margin:4px 0;">त्योहारों पर महंगाई की मार: खाद्य तेल, दाल और सब्जियों के दाम आसमान पर</h3>
+            <div class="byline">✍️ <strong>तनुजा जोशी</strong> (विशेष आर्थिक ब्यूरो) | प्रतिप्रश्न भारत</div>
+            <p class="text">
+                दशहरा-दिवाली से पहले खुदरा बाजारों में सरसों तेल 20 से 30 रुपये प्रति लीटर तक महंगा हो चुका है। प्याज-टमाटर 50 से 70 रुपये प्रति किलो पर टिके हैं। थोक और खुदरा के भारी अंतर से मुनाफा बिचौलियों की जेब में जा रहा है।
+            </p>
         </div>
 
         <div class="footer">
             <span>प्रतिप्रश्न भारत (ज़मीनी पड़ताल)</span>
-            <span>जन-सरोकार</span>
+            <span>जन-सरोकार विशेषांक</span>
             <span>पृष्ठ 3 / 4</span>
         </div>
     </div>
 
-    <!-- PAGE 4 -->
+    <!-- ================= PAGE 4 ================= -->
     <div class="sheet">
-        <div class="top-bar">
-            <span>प्रतिप्रश्न भारत • खेल विमर्श</span>
-            <span>15 अक्टूबर 2026</span>
+        <div class="top-meta">
+            <span>प्रतिप्रश्न भारत • खेल विमर्श & अंतिम पृष्ठ</span>
+            <span>16 अक्टूबर 2026</span>
             <span>पृष्ठ 4 / 4</span>
         </div>
 
-        <span class="badge">हैदराबाद T20I समीक्षा</span>
+        <span class="badge">हैदराबाद T20I स्पेशल समीक्षा</span>
         <h2 class="title">घरेलू मैदान पर लुटाए 247 रन: शाई होप का शतक, लचर गेंदबाजी और गंभीर की रणनीति पर सवाल</h2>
         <div class="byline">✍️ विशेष खेल डेस्क | हैदराबाद ग्राउंड रिपोर्ट</div>
 
-        <div class="score">
-            <div>WI: 247/3 (20 ov)<br><span style="color:#b91c1c;">होप: 102 (50)</span></div>
-            <div>IND: 223/10 (19.3 ov)<br><span style="color:#b91c1c;">संजू: 56, तिलक: 43</span></div>
+        <div style="background:#fdf2f2; border:1px solid #fecaca; padding:8px; margin:10px 0; display:flex; justify-content:space-around; font-size:11px; font-weight:bold;">
+            <div>WI: 247/3 (20 ov)<br><span style="color:#880000;">होप: 102 (50)</span></div>
+            <div>IND: 223/10 (19.3 ov)<br><span style="color:#880000;">संजू: 56, तिलक: 43</span></div>
             <div>गेंदबाजी: मयंक 0/52, अर्शदीप 1/52</div>
         </div>
 
         <p class="text">
-            हैदराबाद में चौथे टी20 में भारत को वेस्टइंडीज के हाथों 24 रनों से हार झेलनी पड़ी। बुमराह की गैरमौजूदगी में बैकअप गेंदबाजों का कोई स्पष्ट रोडमैप न होना टीम संतुलन को बिगाड़ रहा है।
+            हैदराबाद में चौथे टी20 मुकाबले में भारत को वेस्टइंडीज के हाथों 24 रनों से हार झेलनी पड़ी। बुमराह की अनुपस्थिति में बैकअप गेंदबाजों का कोई स्पष्ट रोडमैप न होना और लगातार हो रहे प्रयोग टीम संतुलन को बिगाड़ रहे हैं।
         </p>
 
         <!-- संपादक विशेष -->
-        <div class="box" style="background-color:#fffbeb; border-color:#d97706;">
-            <div style="font-weight:bold; color:#b45309; font-size:11px; margin-bottom:3px;">
+        <div class="box" style="background:#fffbeb; border-color:#d97706; margin-top:15px;">
+            <div style="font-weight:bold; color:#b45309; font-size:11.5px; margin-bottom:3px;">
                 🚩 संपादक विशेष टिप्पणी — लक्ष्मी नारायण वशिष्ठ
             </div>
             <p style="margin:0; font-style:italic; line-height:1.5; color:#111;">
@@ -325,18 +281,17 @@
             </p>
         </div>
 
-        <div style="margin-top:15px; padding-top:6px; border-top:1px solid #000; font-size:9.5px; color:#4b5563; display:flex; justify-content:space-between;">
-            <div><strong>प्रकाशक:</strong> प्रतिप्रश्न भारत मीडिया समूह, नई दिल्ली</div>
-            <div><strong>संपर्क:</strong> grievances@pratiprashnabharat.in</div>
+        <div style="margin-top:15px; padding-top:6px; border-top:1px solid #000; font-size:9.5px; color:#555; display:flex; justify-content:space-between;">
+            <div><strong>मुद्रक एवं प्रकाशक:</strong> प्रतिप्रश्न भारत मीडिया समूह, नई दिल्ली</div>
+            <div><strong>शिकायत संपर्क:</strong> grievances@pratiprashnabharat.in</div>
         </div>
 
         <div class="footer">
             <span>प्रतिप्रश्न भारत (खेल विमर्श)</span>
-            <span>प्रथम अंक (समाप्त)</span>
+            <span>अंक 02 (समाप्त)</span>
             <span>पृष्ठ 4 / 4</span>
         </div>
     </div>
 
 </body>
-    </html>
-    
+</html>
