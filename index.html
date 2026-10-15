@@ -37,9 +37,9 @@
     <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex overflow-x-auto text-sm font-bold text-gray-700 py-3 px-4 space-x-6 whitespace-nowrap">
             <a href="index.html" class="text-red-700 border-b-2 border-red-700 pb-1">मुख्य पृष्ठ</a>
+            <a href="#khel" class="hover:text-red-700">खेल विमर्श</a>
             <a href="#satta" class="hover:text-red-700">सत्ता & नीति</a>
             <a href="#janawaz" class="hover:text-red-700">जन-आवाज़</a>
-            <a href="#padtaal" class="hover:text-red-700">ज़मीनी पड़ताल</a>
             <a href="about.html" class="hover:text-red-700">संपादकीय एवं लीगल</a>
         </div>
     </nav>
@@ -47,10 +47,10 @@
     <!-- Main Content Area -->
     <main class="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 mt-2">
         
-        <!-- Left/Center Main Column (Lead Story + Older Stories Grid) -->
+        <!-- Left/Center Main Column -->
         <div class="md:col-span-2 space-y-8">
             
-            <!-- Lead/Featured Story (Launch Post) -->
+            <!-- 1. मुख्य लीड स्टोरी (कलाम साहब वाली लॉन्च पोस्ट शीर्ष पर यथावत) -->
             <article class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 
                 <!-- Main Visual (Kalam Sahab Image) -->
@@ -145,240 +145,59 @@
                 </div>
             </article>
 
-            <!-- Recent Stories / पुरानी खबरें सेक्शन -->
-            <section class="space-y-4">
+            <!-- 2. नई ताज़ा पोस्ट (भारत की हार, गंभीर की आलोचना व अंत में संपादक विशेष) -->
+            <section id="khel" class="space-y-4">
                 <div class="flex items-center justify-between border-b-2 border-red-700 pb-2">
-                    <h3 class="text-xl font-bold text-gray-900 serif-hindi">पिछली रिपोर्ट्स व ज़मीनी पड़ताल</h3>
-                    <span class="text-xs text-gray-500 font-semibold">पुराने संग्रह</span>
+                    <h3 class="text-xl font-bold text-gray-900 serif-hindi">ताज़ा खेल पड़ताल व संपादकीय विमर्श</h3>
+                    <span class="text-xs text-gray-500 font-semibold">हैदराबाद T20I स्पेशल</span>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <!-- पुरानी खबर 1 (बजट पड़ताल) -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <article class="bg-white p-6 md:p-7 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-red-700 text-white text-xs px-2.5 py-0.5 rounded font-bold uppercase tracking-wide">खेल विमर्श / तीखे सवाल</span>
+                        <span class="text-xs text-gray-500 font-semibold">📅 15 अक्टूबर 2026</span>
+                    </div>
+
+                    <h4 class="font-extrabold text-xl md:text-2xl text-gray-900 leading-snug hover:text-red-700 transition serif-hindi">
+                        हैदराबाद में घरेलू मैदान पर लुटाए 247 रन: शाई होप का शतक, लचर गेंदबाजी और मुख्य कोच गौतम गंभीर की रणनीति पर खड़े हुए तीखे सवाल
+                    </h4>
+
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        हैदराबाद के राजीव गांधी इंटरनेशनल स्टेडियम में चौथे टी20 मुकाबले में भारत को वेस्टइंडीज के हाथों 24 रनों से करारी शिकस्त झेलनी पड़ी, जिससे 5 मैचों की यह द्विपक्षीय सीरीज 2-2 की बराबरी पर आ गई है। पहले गेंदबाजी चुनकर 247 रन लुटा देना और शाई होप (102 रन) के प्रहार के सामने भारतीय गेंदबाजों का पूरी तरह बिखर जाना मुख्य कोच गौतम गंभीर की रणनीति और गेंदबाजी संयोजन पर गंभीर प्रश्न खड़े कर रहा है।
+                    </p>
+
+                    <!-- सटीक आंकड़ों का ग्रिड -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-red-50/70 p-3 rounded-md border border-red-100 text-xs text-gray-800">
                         <div>
-                            <span class="bg-zinc-800 text-white text-xs px-2 py-0.5 rounded font-semibold">नीतिगत पड़ताल</span>
-                            <h4 class="font-bold text-base mt-2 text-gray-900 leading-snug">
-                                बजट और दावों के बीच फंसी ज़मीनी योजनाएँ: कागज़ों से ज़मीन तक का हिसाब कौन देगा?
-                            </h4>
-                            <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                                सरकार की हर बड़ी नीति का मूल आधार जन-कल्याण बताया जाता है, परंतु अंतिम पंक्ति में खड़े नागरिक तक इसका वास्तविक लाभ कितना पहुँच रहा है? 'प्रतिप्रश्न भारत' की विशेष पड़ताल।
-                            </p>
+                            <span class="font-bold text-red-800">WI का स्कोर:</span> 247/3 (20 ओवर)<br>
+                            <span class="text-gray-600">शाई होप: 102 रन (50 गेंदें)</span>
                         </div>
-                        <div class="mt-4 pt-3 border-t text-xs text-gray-500 flex items-center justify-between">
-                            <span>✍️ प्रतिप्रश्न ब्यूरो</span>
-                            <span>📅 10 अक्टूबर</span>
-                        </div>
-                    </div>
-
-                    <!-- पुरानी खबर 2 (जन-आवाज़) -->
-                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
                         <div>
-                            <span class="bg-red-700 text-white text-xs px-2 py-0.5 rounded font-semibold">जन-आवाज़</span>
-                            <h4 class="font-bold text-base mt-2 text-gray-900 leading-snug">
-                                रोजगार और भर्ती प्रक्रियाओं में देरी: युवाओं की अनसुनी पुकार
-                            </h4>
-                            <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                                परीक्षाओं के परिणाम और रिक्त पदों की प्रक्रिया पर नीतिगत विमर्श और जवाबदेही तय करने की मांग। युवाओं के भविष्य से जुड़े कड़वे सवाल।
-                            </p>
+                            <span class="font-bold text-red-800">भारत का स्कोर:</span> 223/10 (19.3 ओवर)<br>
+                            <span class="text-gray-600">संजू: 56 (23) | तिलक: 43</span>
                         </div>
-                        <div class="mt-4 pt-3 border-t text-xs text-gray-500 flex items-center justify-between">
-                            <span>✍️ विशेष डेस्क</span>
-                            <span>📅 08 अक्टूबर</span>
+                        <div>
+                            <span class="font-bold text-red-800">गेंदबाजी फ्लॉप शो:</span><br>
+                            <span class="text-gray-600">मयंक 0/52, अर्शदीप 1/52</span>
                         </div>
                     </div>
-                </div>
-            </section>
 
-        </div>
-
-        <!-- Sidebar -->
-        <div class="space-y-6">
-            <!-- Manifesto Box -->
-            <div class="bg-zinc-900 text-white p-5 rounded-lg shadow-sm border-t-4 border-red-600">
-                <h3 class="font-bold text-base text-red-400">हमारा संकल्प</h3>
-                <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    "सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों का पक्षधर बनकर जवाबदेही तय करेंगे।"
-                </p>
-            </div>
-
-            <!-- Leadership Box -->
-            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-lg font-bold border-b-2 border-red-700 pb-2 text-gray-900">संपादकीय नेतृत्व</h3>
-                <div class="mt-4 space-y-3 text-sm">
-                    <div>
-                        <p class="font-bold text-gray-900">लक्ष्मी नारायण वशिष्ठ</p>
-                        <p class="text-xs text-gray-500 font-semibold">मुख्य संपादक एवं संस्थापक</p>
-                    </div>
-                    <div class="border-t pt-2">
-                        <p class="font-bold text-gray-900">विकास शर्मा</p>
-                        <p class="text-xs text-gray-500 font-semibold">शिकायत निवारण अधिकारी (Grievance Officer)</p>
-                    </div>
-                    <div class="pt-2">
-                        <a href="about.html" class="inline-block text-xs font-bold text-red-700 hover:underline">संपादकीय नीति व संपर्क देखें →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 text-gray-400 text-sm mt-12 py-8 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
-            <h2 class="text-2xl font-bold text-white serif-hindi">प्रतिप्रश्न भारत</h2>
-            <p class="text-xs text-gray-400">चौथा स्तंभ, जन-जन के संग | स्वतंत्र एवं निष्पक्ष डिजिटल मंच</p>
-            <div class="flex justify-center space-x-4 text-xs text-gray-300 pt-2">
-                <a href="about.html" class="hover:underline">हमारे बारे में</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपादकीय नीति</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">शिकायत निवारण</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपर्क</a>
-            </div>
-            <p class="text-xs text-gray-600 pt-4">© प्रतिप्रश्न भारत. सर्वाधिकार सुरक्षित.</p>
-        </div>
-    </footer>
-
-    <script>
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('date-display').textContent = new Date().toLocaleDateString('hi-IN', options);
-    </script>
-</body>
-</html>
-i><strong>वैज्ञानिक दृष्टिकोण (Scientific Temper):</strong> रूढ़िवादिता और कागज़ी दावों के बरक्स तर्क, अनुसंधान और तथ्य-आधारित चिंतन को बढ़ावा देना। कलाम साहब के अनुसार हर नीति का मूल्यांकन तार्किक कसौटी पर होना चाहिए।</li>
-                            <li><strong>युवा शक्ति और स्वावलंबन:</strong> भर्ती प्रक्रियाओं में विलंब, शिक्षा तंत्र की चुनौतियाँ और युवाओं के बौद्धिक अधिकारों पर सवाल पूछना हमारी शीर्ष प्राथमिकता रहेगी।</li>
-                        </ul>
-
-                        <p class="pt-3 font-semibold text-gray-900 border-t">
-                            कलाम साहब ने सिखाया था कि सच्चा देशभक्त वह है जो अपने देश की कमियों पर पर्दा डालने के बजाय उन्हें सुधारने के लिए कड़वे सच का सामना करे। 'प्रतिप्रश्न भारत' उसी वैज्ञानिक चेतना और निडरता को अपनी कलम बनाएगा। यह मंच आपका है, आपके सवालों का है।
+                    <!-- मैच का विस्तृत विश्लेषण -->
+                    <div class="text-xs md:text-sm text-gray-700 leading-relaxed space-y-2 pt-1">
+                        <p>
+                            248 रनों के विशाल लक्ष्य का पीछा करते हुए संजू सैमसन (56 रन, 23 गेंदें) और तिलक वर्मा (43 रन) ने आतिशी पारियां खेलकर उम्मीदें जरूर जगाईं, लेकिन कीमो पॉल (5 विकेट) की सटीक गेंदों के आगे मध्यक्रम दबाव नहीं झेल सका और पूरी टीम 19.3 ओवर में 223 रनों पर ऑलआउट हो गई।
+                        </p>
+                        <p>
+                            जसप्रीत बुमराह की अनुपस्थिति में बैकअप गेंदबाजों का कोई स्पष्ट रोडमैप न होना, हर मैच में बल्लेबाजी क्रम के साथ प्रयोग और मैदान पर रणनीति के अभाव ने कोच गौतम गंभीर के रणनीतिक दृष्टिकोण को सीधे कठघरे में खड़ा कर दिया है। 17 अक्टूबर को बेंगलुरु में होने वाले निर्णायक मुकाबले से पहले टीम प्रबंधन को इन सवालों का सामना करना ही होगा।
                         </p>
                     </div>
 
-                </div>
-            </article>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="space-y-6">
-            <!-- Manifesto Box -->
-            <div class="bg-zinc-900 text-white p-5 rounded-lg shadow-sm border-t-4 border-red-600">
-                <h3 class="font-bold text-base text-red-400">हमारा संकल्प</h3>
-                <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    "सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों का पक्षधर बनकर जवाबदेही तय करेंगे।"
-                </p>
-            </div>
-
-            <!-- Leadership Box -->
-            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-lg font-bold border-b-2 border-red-700 pb-2 text-gray-900">संपादकीय नेतृत्व</h3>
-                <div class="mt-4 space-y-3 text-sm">
-                    <div>
-                        <p class="font-bold text-gray-900">लक्ष्मी नारायण वशिष्ठ</p>
-                        <p class="text-xs text-gray-500 font-semibold">मुख्य संपादक एवं संस्थापक</p>
-                    </div>
-                    <div class="border-t pt-2">
-                        <p class="font-bold text-gray-900">विकास शर्मा</p>
-                        <p class="text-xs text-gray-500 font-semibold">शिकायत निवारण अधिकारी (Grievance Officer)</p>
-                    </div>
-                    <div class="pt-2">
-                        <a href="about.html" class="inline-block text-xs font-bold text-red-700 hover:underline">संपादकीय नीति व संपर्क देखें →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 text-gray-400 text-sm mt-12 py-8 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
-            <h2 class="text-2xl font-bold text-white serif-hindi">प्रतिप्रश्न भारत</h2>
-            <p class="text-xs text-gray-400">चौथा स्तंभ, जन-जन के संग | स्वतंत्र एवं निष्पक्ष डिजिटल मंच</p>
-            <div class="flex justify-center space-x-4 text-xs text-gray-300 pt-2">
-                <a href="about.html" class="hover:underline">हमारे बारे में</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपादकीय नीति</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">शिकायत निवारण</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपर्क</a>
-            </div>
-            <p class="text-xs text-gray-600 pt-4">© प्रतिप्रश्न भारत. सर्वाधिकार सुरक्षित.</p>
-        </div>
-    </footer>
-
-    <script>
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('date-display').textContent = new Date().toLocaleDateString('hi-IN', options);
-    </script>
-</body>
-</html>
-दावों के बरक्स तर्क, अनुसंधान और तथ्य-आधारित चिंतन को बढ़ावा देना। कलाम साहब के अनुसार हर नीति का मूल्यांकन तार्किक कसौटी पर होना चाहिए।</li>
-                            <li><strong>युवा शक्ति और स्वावलंबन:</strong> भर्ती प्रक्रियाओं में विलंब, शिक्षा तंत्र की चुनौतियाँ और युवाओं के बौद्धिक अधिकारों पर सवाल पूछना हमारी शीर्ष प्राथमिकता रहेगी।</li>
-                        </ul>
-
-                        <p class="pt-3 font-semibold text-gray-900 border-t">
-                            कलाम साहब ने सिखाया था कि सच्चा देशभक्त वह है जो अपने देश की कमियों पर पर्दा डालने के बजाय उन्हें सुधारने के लिए कड़वे सच का सामना करे। 'प्रतिप्रश्न भारत' उसी वैज्ञानिक चेतना और निडरता को अपनी कलम बनाएगा। यह मंच आपका है, आपके सवालों का है।
-                        </p>
-                    </div>
-
-                </div>
-            </article>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="space-y-6">
-            <!-- Manifesto Box -->
-            <div class="bg-zinc-900 text-white p-5 rounded-lg shadow-sm border-t-4 border-red-600">
-                <h3 class="font-bold text-base text-red-400">हमारा संकल्प</h3>
-                <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                    "सत्ता किसी की भी हो, सवाल जनता का होगा। हम किसी दल का पक्ष नहीं, बल्कि संविधान और नागरिक अधिकारों का पक्षधर बनकर जवाबदेही तय करेंगे।"
-                </p>
-            </div>
-
-            <!-- Leadership Box -->
-            <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-lg font-bold border-b-2 border-red-700 pb-2 text-gray-900">संपादकीय नेतृत्व</h3>
-                <div class="mt-4 space-y-3 text-sm">
-                    <div>
-                        <p class="font-bold text-gray-900">लक्ष्मी नारायण वशिष्ठ</p>
-                        <p class="text-xs text-gray-500 font-semibold">मुख्य संपादक एवं संस्थापक</p>
-                    </div>
-                    <div class="border-t pt-2">
-                        <p class="font-bold text-gray-900">विकास शर्मा</p>
-                        <p class="text-xs text-gray-500 font-semibold">शिकायत निवारण अधिकारी (Grievance Officer)</p>
-                    </div>
-                    <div class="pt-2">
-                        <a href="about.html" class="inline-block text-xs font-bold text-red-700 hover:underline">संपादकीय नीति व संपर्क देखें →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 text-gray-400 text-sm mt-12 py-8 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
-            <h2 class="text-2xl font-bold text-white serif-hindi">प्रतिप्रश्न भारत</h2>
-            <p class="text-xs text-gray-400">चौथा स्तंभ, जन-जन के संग | स्वतंत्र एवं निष्पक्ष डिजिटल मंच</p>
-            <div class="flex justify-center space-x-4 text-xs text-gray-300 pt-2">
-                <a href="about.html" class="hover:underline">हमारे बारे में</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपादकीय नीति</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">शिकायत निवारण</a>
-                <span>•</span>
-                <a href="about.html" class="hover:underline">संपर्क</a>
-            </div>
-            <p class="text-xs text-gray-600 pt-4">© प्रतिप्रश्न भारत. सर्वाधिकार सुरक्षित.</p>
-        </div>
-    </footer>
-
-    <script>
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('date-display').textContent = new Date().toLocaleDateString('hi-IN', options);
-    </script>
-</body>
-</html>
+                    <!-- संपादक विशेष टिप्पणी (प्रभावशाली निष्कर्ष के रूप में अंत में) -->
+                    <div class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-md space-y-2 mt-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-amber-700 text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">संपादक विशेष</span>
+                            <span class="text-xs font-bold text-gray-900">लक्ष्मी नारायण वशिष्ठ</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-800 font-medium italic leading-relaxed">
+                            "आखिर क्या कारण है कि अपने ही घरेलू मैदानों पर जानबूझकर गेंदबाजों को पंगु बना देने वाली और अति-सपाट या अति-डॉक्टर्ड पिचें तैयार की जा रही हैं? क्या यह अपनी ही टीम के लिए उल्टा तीर साबित नहीं हो रहा? हमें नहीं भूलना चाहिए कि ठीक 3 वर्ष पहले (2023) वनडे वर्ल्ड कप के फ़ाइनल में भी
+                            
