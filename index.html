@@ -19,10 +19,12 @@
         <span>शुक्रवार, 16 अक्टूबर 2026</span>
     </div>
 
-    <!-- Header & Masthead -->
+    <!-- Header & Masthead With Official Logo -->
     <header class="bg-white border-b-4 border-red-700 shadow-sm py-4 px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-red-800 serif-hindi tracking-wide">प्रतिप्रश्न भारत</h1>
-        <p class="text-gray-700 text-sm md:text-base font-semibold mt-1">चौथा स्तंभ, जन-जन के संग</p>
+        <div class="flex flex-col items-center justify-center">
+            <img src="logo.png" alt="प्रतिप्रश्न भारत लोगो" class="h-28 md:h-36 object-contain mb-1 drop-shadow-sm" onerror="this.src='https://raw.githubusercontent.com/infostallion01-commits/-/main/logo.png';">
+            <p class="text-xs text-gray-500 font-semibold tracking-wider">पंजीकृत डिजिटल समाचार एवं न्यायिक विमर्श मंच</p>
+        </div>
     </header>
 
     <!-- Breaking News Ticker -->
@@ -45,7 +47,7 @@
                 <a href="#pollution-report" class="hover:text-red-700">पर्यावरण</a>
                 <a href="#inflation-report" class="hover:text-red-700">अर्थव्यवस्था</a>
                 <a href="#khel" class="hover:text-red-700">खेल विमर्श</a>
-                <a href="#contact-form-section" class="hover:text-red-700">संपर्क करें</a>
+                <a href="#contact-form-section" class="text-red-700 font-extrabold hover:text-red-800">संपर्क करें</a>
             </div>
             <div>
                 <a href="epaper.html" class="bg-red-700 text-white px-3 py-1 rounded text-xs font-bold shadow-sm">
@@ -184,85 +186,8 @@
                 <p class="text-xs text-gray-600 mt-0.5">संपादकीय डेस्क, शिकायत निवारण या किसी भी विमर्श के लिए सीधे संदेश भेजें:</p>
             </div>
 
-            <form action="mailto:infostallion01@gmail.com" method="POST" enctype="text/plain" class="space-y-3 text-sm">
+            <form action="mailto:info.stallion01@gmail.com" method="POST" enctype="text/plain" class="space-y-3 text-sm">
                 <div>
                     <label class="block text-xs font-bold text-gray-700 mb-1">आपका नाम *</label>
-                    <input type="text" name="Name" required placeholder="अपना पूरा नाम लिखें" class="w-full bg-gray-50 border border-gray-300 rounded p-2 text-gray-900 text-xs outline-none focus:border-red-700">
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">ईमेल *</label>
-                        <input type="email" name="Email" required placeholder="आपका ईमेल पता" class="w-full bg-gray-50 border border-gray-300 rounded p-2 text-gray-900 text-xs outline-none focus:border-red-700">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 mb-1">फोन नंबर (वैकल्पिक)</label>
-                        <input type="tel" name="Phone" placeholder="संपर्क नंबर" class="w-full bg-gray-50 border border-gray-300 rounded p-2 text-gray-900 text-xs outline-none focus:border-red-700">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">विषय (Subject) *</label>
-                    <input type="text" name="Subject" required placeholder="संदेश या शिकायत का विषय" class="w-full bg-gray-50 border border-gray-300 rounded p-2 text-gray-900 text-xs outline-none focus:border-red-700">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">संदेश / शिकायत का विवरण *</label>
-                    <textarea name="Message" rows="4" required placeholder="अपना संदेश या प्रतिप्रश्न यहाँ विस्तार से लिखें..." class="w-full bg-gray-50 border border-gray-300 rounded p-2 text-gray-900 text-xs outline-none focus:border-red-700"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-2.5 rounded text-xs uppercase tracking-wider transition shadow-sm">
-                    ✉️ संदेश प्रेषित करें (Submit Message)
-                </button>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- ================= फुटर: हमारे बारे में, संपादकीय मंडल व संपर्क ================= -->
-    <footer class="bg-zinc-950 text-gray-300 mt-12 border-t-4 border-red-700 pt-8 pb-6">
-        <div class="max-w-3xl mx-auto px-4 space-y-6">
-            
-            <!-- हमारे बारे में -->
-            <div>
-                <h3 class="text-lg font-bold text-white border-b border-zinc-700 pb-1 mb-2">हमारे बारे में (About Us)</h3>
-                <p class="text-xs text-gray-400 leading-relaxed">
-                    <strong>'प्रतिप्रश्न भारत'</strong> स्वतंत्र, निष्पक्ष और निर्भीक पत्रकारिता को समर्पित एक डिजिटल समाचार व विमर्श मंच है। हमारा ध्येय किसी कॉर्पोरेट या राजनीतिक प्रभाव से परे रहकर अंतिम पंक्ति के नागरिक की आवाज़ बनना और संवैधानिक अधिकारों की रक्षा करना है।
-                </p>
-            </div>
-
-            <!-- संपादकीय नेतृत्व मंडल -->
-            <div>
-                <h3 class="text-lg font-bold text-white border-b border-zinc-700 pb-1 mb-2">संपादकीय नेतृत्व मंडल</h3>
-                <div class="space-y-2 text-xs">
-                    <div>
-                        <p class="font-bold text-white text-sm">लक्ष्मी नारायण वशिष्ठ</p>
-                        <p class="text-red-400 font-semibold">मुख्य संपादक एवं संस्थापक</p>
-                        <p class="text-gray-400 text-[11px]">⚖️ विधिक एवं न्यायिक समीक्षक • मुख्य विश्लेषक (न्यायशास्त्र एवं सुशासन)</p>
-                    </div>
-                    <div class="border-t border-zinc-800 pt-1.5">
-                        <p class="font-bold text-white">विकास शर्मा</p>
-                        <p class="text-gray-400">शिकायत निवारण अधिकारी (Grievance Officer)</p>
-                    </div>
-                    <div class="border-t border-zinc-800 pt-1.5">
-                        <p class="font-bold text-white">तनुजा जोशी</p>
-                        <p class="text-gray-400">वरिष्ठ संवाददाता एवं आर्थिक-पर्यावरण ब्यूरो</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- संपर्क विवरण -->
-            <div class="border-t border-zinc-800 pt-3 text-xs text-gray-400 space-y-1">
-                <div><strong class="text-white">शिकायत निवारण अधिकारी:</strong> विकास शर्मा</div>
-                <div><strong class="text-white">ईमेल:</strong> <a href="mailto:infostallion01@gmail.com" class="text-red-400 underline">infostallion01@gmail.com</a></div>
-                <div>📍 नई दिल्ली, भारत</div>
-                <div class="text-[11px] text-gray-500 pt-1">
-                    डिजिटल मीडिया आचार संहिता व भारतीय कानूनों के तहत पूर्ण पारदर्शी व उत्तरदायी मंच।
-                </div>
-            </div>
-
-            <div class="text-center text-[11px] text-gray-600 pt-3 border-t border-zinc-900">
-                © 2026 प्रतिप्रश्न भारत. सर्वाधिकार सुरक्षित.
-            </div>
-
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <input type="text" name="Name" required placeholder="अपना पूरा नाम लिखें" class="w-full bg-gray-50 border border-gray-300 rounded p-
+                       
